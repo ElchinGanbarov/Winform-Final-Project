@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Library_management.Models
 {
-   public class Combobox
+   public class CmbCombobox
     {
         public int Id { get; set; }
         public string Name { get; set; }

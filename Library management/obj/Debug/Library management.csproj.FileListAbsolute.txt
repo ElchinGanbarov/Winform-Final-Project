@@ -14,3 +14,14 @@ C:\Users\Admin\Desktop\Winform Final Project\Library management\Library manageme
 C:\Users\Admin\Desktop\Winform Final Project\Library management\Library management\obj\Debug\Library management.exe
 C:\Users\Admin\Desktop\Winform Final Project\Library management\Library management\obj\Debug\Library management.pdb
 C:\Users\Admin\Desktop\Winform Final Project\Library management\Library management\obj\Debug\Library_management.Migrations.BooksAndCustomersAndGenresAndManagersAndOrdersAndOrderBooks.resources
+C:\Users\Admin\Desktop\Winform Final Project\Library management\Library management\obj\Debug\Library_management.Migrations.CustomerAndManagerUpdate.resources
+C:\Users\Admin\Desktop\Winform Final Project\Library management\Library management\obj\Debug\Library_management.Migrations.ManagerStatusAdd.resources
+C:\Users\Admin\Desktop\Winform Final Project\Library management\Library management\bin\Debug\CryptoHelper.dll
+C:\Users\Admin\Desktop\Winform Final Project\Library management\Library management\bin\Debug\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Admin\Desktop\Winform Final Project\Library management\Library management\bin\Debug\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Admin\Desktop\Winform Final Project\Library management\Library management\bin\Debug\CryptoHelper.xml
+C:\Users\Admin\Desktop\Winform Final Project\Library management\Library management\bin\Debug\Microsoft.AspNetCore.Cryptography.Internal.xml
+C:\Users\Admin\Desktop\Winform Final Project\Library management\Library management\bin\Debug\Microsoft.AspNetCore.Cryptography.KeyDerivation.xml
+C:\Users\Admin\Desktop\Winform Final Project\Library management\Library management\obj\Debug\Library_management.Forms.DashboardForm.resources
+C:\Users\Admin\Desktop\Winform Final Project\Library management\Library management\obj\Debug\Library_management.Forms.BookForm.resources
+C:\Users\Admin\Desktop\Winform Final Project\Library management\Library management\obj\Debug\Library_management.Forms.BookCreatForm.resources

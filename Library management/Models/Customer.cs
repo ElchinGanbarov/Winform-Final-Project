@@ -21,9 +21,6 @@ namespace Library_management.Models
         [MaxLength(50)]
         public string Email { get; set; }
         [Required]
-        [MaxLength(500)]
-        public string Password { get; set; }
-        [Required]
         [MaxLength(50)]
         public string Phone { get; set; }
         [Required]

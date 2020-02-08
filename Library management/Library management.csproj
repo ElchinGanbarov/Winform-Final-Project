@@ -36,11 +36,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CryptoHelper, Version=3.0.2.0, Culture=neutral, PublicKeyToken=646ad3faa20406ba, processorArchitecture=MSIL">
+      <HintPath>..\packages\CryptoHelper.3.0.2\lib\netstandard2.0\CryptoHelper.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Cryptography.Internal, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Cryptography.Internal.2.0.1\lib\netstandard2.0\Microsoft.AspNetCore.Cryptography.Internal.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Cryptography.KeyDerivation, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Cryptography.KeyDerivation.2.0.1\lib\netstandard2.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -57,6 +66,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\LibraryDbContext.cs" />
+    <Compile Include="Forms\BookCreatForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BookCreatForm.Designer.cs">
+      <DependentUpon>BookCreatForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BookForm.Designer.cs">
+      <DependentUpon>BookForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DashboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DashboardForm.Designer.cs">
+      <DependentUpon>DashboardForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,22 +94,51 @@
     <Compile Include="Migrations\202002071455065_BooksAndCustomersAndGenresAndManagersAndOrdersAndOrderBooks.designer.cs">
       <DependentUpon>202002071455065_BooksAndCustomersAndGenresAndManagersAndOrdersAndOrderBooks.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002071636179_CustomerAndManagerUpdate.cs" />
+    <Compile Include="Migrations\202002071636179_CustomerAndManagerUpdate.designer.cs">
+      <DependentUpon>202002071636179_CustomerAndManagerUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002071645238_ManagerStatusAdd.cs" />
+    <Compile Include="Migrations\202002071645238_ManagerStatusAdd.designer.cs">
+      <DependentUpon>202002071645238_ManagerStatusAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Book.cs" />
-    <Compile Include="Models\Combobox.cs" />
+    <Compile Include="Models\BookDal.cs" />
+    <Compile Include="Models\CmbCombobox.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\CustomerDal.cs" />
     <Compile Include="Models\Extensions.cs" />
     <Compile Include="Models\Genre.cs" />
+    <Compile Include="Models\GenreDal.cs" />
+    <Compile Include="Models\IRepository.cs" />
     <Compile Include="Models\Manager.cs" />
+    <Compile Include="Models\ManagerDal.cs" />
+    <Compile Include="Models\OrderDal.cs" />
     <Compile Include="Models\Orders.cs" />
     <Compile Include="Models\OrderBook.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\BookCreatForm.resx">
+      <DependentUpon>BookCreatForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BookForm.resx">
+      <DependentUpon>BookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DashboardForm.resx">
+      <DependentUpon>DashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002071455065_BooksAndCustomersAndGenresAndManagersAndOrdersAndOrderBooks.resx">
       <DependentUpon>202002071455065_BooksAndCustomersAndGenresAndManagersAndOrdersAndOrderBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002071636179_CustomerAndManagerUpdate.resx">
+      <DependentUpon>202002071636179_CustomerAndManagerUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002071645238_ManagerStatusAdd.resx">
+      <DependentUpon>202002071645238_ManagerStatusAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

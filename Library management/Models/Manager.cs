@@ -27,11 +27,14 @@ namespace Library_management.Models
         [MaxLength(50)]
         public string Email { get; set; }
         [Required]
-        [MaxLength(500)]
+        [MaxLength(100)]
         public string Password { get; set; }
         [Required]
         [MaxLength(50)]
         public string Phone { get; set; }
+
+        [Column(TypeName ="bit")]
+        public bool Status { get; set; }
         public ManagerLevel Level { get; set; }
     }
 }
