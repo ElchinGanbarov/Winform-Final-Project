@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Library_management.Data;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,24 +10,51 @@ namespace Library_management.Models
 {
   public  class CustomerDal : IRepository<Customer>
     {
-        public void Create(Customer entity)
+        public Customer GetById(int id)
         {
-            throw new NotImplementedException();
+            using (LibraryDbContext _context = new LibraryDbContext())
+            {
+
+                return _context.Customers.Find(id);
+
+            }
+        }
+        public void Create(Customer customer)
+        {
+            using (LibraryDbContext _context = new LibraryDbContext())
+            {
+                var entity = _context.Entry(customer);
+                entity.State = EntityState.Added;
+                _context.SaveChanges();
+            }
         }
 
-        public void Delete(Customer entity)
+        public void Delete(Customer customer)
         {
-            throw new NotImplementedException();
+            using (LibraryDbContext _context = new LibraryDbContext())
+            {
+                var entity = _context.Entry(customer);
+                entity.State = EntityState.Deleted;
+                _context.SaveChanges();
+            }
         }
 
         public List<Customer> GetAll()
         {
-            throw new NotImplementedException();
+            using (LibraryDbContext _context = new LibraryDbContext())
+            {
+                return _context.Customers.ToList();
+            }
         }
 
-        public void Update(Customer entity)
+        public void Update(Customer customer)
         {
-            throw new NotImplementedException();
+            using (LibraryDbContext _context = new LibraryDbContext())
+            {
+                var entity = _context.Entry(customer);
+                entity.State = EntityState.Modified;
+                _context.SaveChanges();
+            }
         }
     }
 }

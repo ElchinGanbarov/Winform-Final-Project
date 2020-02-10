@@ -119,7 +119,7 @@
             // SelectedLabel
             // 
             this.SelectedLabel.AutoSize = true;
-            this.SelectedLabel.Location = new System.Drawing.Point(9, 7);
+            this.SelectedLabel.Location = new System.Drawing.Point(12, 14);
             this.SelectedLabel.Name = "SelectedLabel";
             this.SelectedLabel.Size = new System.Drawing.Size(74, 13);
             this.SelectedLabel.TabIndex = 4;
@@ -129,7 +129,7 @@
             // SelectedName
             // 
             this.SelectedName.AutoSize = true;
-            this.SelectedName.Location = new System.Drawing.Point(89, 7);
+            this.SelectedName.Location = new System.Drawing.Point(92, 14);
             this.SelectedName.Name = "SelectedName";
             this.SelectedName.Size = new System.Drawing.Size(0, 13);
             this.SelectedName.TabIndex = 5;

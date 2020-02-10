@@ -25,3 +25,7 @@ C:\Users\Admin\Desktop\Winform Final Project\Library management\Library manageme
 C:\Users\Admin\Desktop\Winform Final Project\Library management\Library management\obj\Debug\Library_management.Forms.DashboardForm.resources
 C:\Users\Admin\Desktop\Winform Final Project\Library management\Library management\obj\Debug\Library_management.Forms.BookForm.resources
 C:\Users\Admin\Desktop\Winform Final Project\Library management\Library management\obj\Debug\Library_management.Forms.BookCreatForm.resources
+C:\Users\Admin\Desktop\Winform Final Project\Library management\Library management\obj\Debug\Library_management.Forms.ManagerCreatedForm.resources
+C:\Users\Admin\Desktop\Winform Final Project\Library management\Library management\obj\Debug\Library_management.Forms.ManagerForm.resources
+C:\Users\Admin\Desktop\Winform Final Project\Library management\Library management\obj\Debug\Library_management.Forms.CustomerCreatedForm.resources
+C:\Users\Admin\Desktop\Winform Final Project\Library management\Library management\obj\Debug\Library_management.Forms.CustomerForm.resources

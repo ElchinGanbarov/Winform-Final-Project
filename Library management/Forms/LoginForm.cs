@@ -38,12 +38,12 @@ namespace Library_management.Forms
             Manager manager = _dbContext.Managers.FirstOrDefault(m => m.Status && m.Email == TxtEmail.Text);
             if (manager != null && Crypto.VerifyHashedPassword(manager.Password, TxtPassword.Text))
             {
-                DashboardForm dashboard = new DashboardForm();
+                DashboardForm dashboard = new DashboardForm(manager);
 
                 dashboard.ShowDialog();
                 this.Close();
             }
-            MessageBox.Show("E-poçt və ya şifrə yalnışdır");
+            MessageBox.Show("E-poçt və ya şifrə yalnışdır", "Xəbərdarlıq", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             this.Close();
         }
     }

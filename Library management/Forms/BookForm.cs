@@ -46,11 +46,34 @@ namespace Library_management.Forms
         {
             FillDataAdd();
         }
+
+
+        #region EVENTS
         //Book Form Load//
         private void BookForm_Load(object sender, EventArgs e)
         {
             FillDataAdd();
         }
+        //Book Deleted//
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+            DialogResult r = MessageBox.Show("Əminsinizmi.?", "Silməyə", MessageBoxButtons.YesNo);
+            if (r == DialogResult.Yes)
+            {
+                _bookDal.Delete(_book);
+                Reset();
+            }
+        }
+
+        //Book Update//
+        private void BtnUpdate_Click(object sender, EventArgs e)
+        {
+            BookCreatForm bookCreat = new BookCreatForm(true, _book);
+            bookCreat.AddBook += BookCreatForm_AddBook;
+            bookCreat.ShowDialog();
+        }
+
+        #endregion
         //DataGridView Row Header//
         private void DataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -62,24 +85,18 @@ namespace Library_management.Forms
             SelectedName.Text = _book.Name;
         }
 
-        //Book Deleted//
-        private void BtnDelete_Click(object sender, EventArgs e)
-        {
-            DialogResult r = MessageBox.Show("Əminsinizmi.?", "Silməyə", MessageBoxButtons.YesNo);
-            if (r == DialogResult.Yes)
-            {
-                _bookDal.Delete(_book);
-                FillDataAdd();
-            } 
-        }
-
-        private void BtnUpdate_Click(object sender, EventArgs e)
-        {
-            BookCreatForm bookCreat = new BookCreatForm(true, _book);
-            bookCreat.AddBook += BookCreatForm_AddBook;
-            bookCreat.ShowDialog();
-        }
-
        
+       
+         //Choose Book Reset//     
+        private void Reset()
+        {
+            _book = null;
+            SelectedName.Text = " ";
+            BtnDelete.Show();
+            BtnUpdate.Show();
+            FillDataAdd();
+        }
+
+
     }
 }

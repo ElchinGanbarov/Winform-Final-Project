@@ -68,6 +68,7 @@
             this.BtnManagers.TabIndex = 2;
             this.BtnManagers.Text = "Idareciler";
             this.BtnManagers.UseVisualStyleBackColor = false;
+            this.BtnManagers.Click += new System.EventHandler(this.BtnManagers_Click);
             // 
             // BtnCustomers
             // 
@@ -80,6 +81,7 @@
             this.BtnCustomers.TabIndex = 3;
             this.BtnCustomers.Text = "Musteriler";
             this.BtnCustomers.UseVisualStyleBackColor = false;
+            this.BtnCustomers.Click += new System.EventHandler(this.BtnCustomers_Click);
             // 
             // BtnReports
             // 

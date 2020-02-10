@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Library_management.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +13,11 @@ namespace Library_management.Forms
 {
     public partial class DashboardForm : Form
     {
-        public DashboardForm()
+        public Manager manager;
+      
+        public DashboardForm(Manager man)
         {
+            manager = man;
             InitializeComponent();
         }
 
@@ -22,6 +26,27 @@ namespace Library_management.Forms
             BookForm bookForm = new BookForm();
 
             bookForm.ShowDialog();
+        }
+
+        private void BtnManagers_Click(object sender, EventArgs e)
+        {
+            if (manager.Level == ManagerLevel.Admin)
+            {
+                ManagerForm managerForm = new ManagerForm();
+                managerForm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Sadece Admin daxil ola biler!");
+            }    
+              
+        }
+
+        private void BtnCustomers_Click(object sender, EventArgs e)
+        {
+            CustomerForm customerForm = new CustomerForm();
+
+            customerForm.ShowDialog();
         }
     }
 }

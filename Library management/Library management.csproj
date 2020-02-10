@@ -78,6 +78,18 @@
     <Compile Include="Forms\BookForm.Designer.cs">
       <DependentUpon>BookForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CustomerCreatedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomerCreatedForm.Designer.cs">
+      <DependentUpon>CustomerCreatedForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomerForm.Designer.cs">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DashboardForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +101,18 @@
     </Compile>
     <Compile Include="Forms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManagerCreatedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManagerCreatedForm.Designer.cs">
+      <DependentUpon>ManagerCreatedForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManagerForm.Designer.cs">
+      <DependentUpon>ManagerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202002071455065_BooksAndCustomersAndGenresAndManagersAndOrdersAndOrderBooks.cs" />
     <Compile Include="Migrations\202002071455065_BooksAndCustomersAndGenresAndManagersAndOrdersAndOrderBooks.designer.cs">
@@ -125,11 +149,23 @@
     <EmbeddedResource Include="Forms\BookForm.resx">
       <DependentUpon>BookForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustomerCreatedForm.resx">
+      <DependentUpon>CustomerCreatedForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustomerForm.resx">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\DashboardForm.resx">
       <DependentUpon>DashboardForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManagerCreatedForm.resx">
+      <DependentUpon>ManagerCreatedForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManagerForm.resx">
+      <DependentUpon>ManagerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002071455065_BooksAndCustomersAndGenresAndManagersAndOrdersAndOrderBooks.resx">
       <DependentUpon>202002071455065_BooksAndCustomersAndGenresAndManagersAndOrdersAndOrderBooks.cs</DependentUpon>
@@ -148,6 +184,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -162,6 +199,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\library-100616524-large.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
