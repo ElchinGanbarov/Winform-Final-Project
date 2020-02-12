@@ -19,6 +19,14 @@ namespace Library_management.Models
 
             }
         }
+        public List<Customer> GetByIdentify(string id)
+        {
+            using (LibraryDbContext _context = new LibraryDbContext())
+            {
+                return  _context.Customers.Where(p=>p.IdentityNumber.Contains(id)).ToList();
+                
+            }
+        }
         public void Create(Customer customer)
         {
             using (LibraryDbContext _context = new LibraryDbContext())

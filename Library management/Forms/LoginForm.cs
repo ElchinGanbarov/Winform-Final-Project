@@ -39,12 +39,10 @@ namespace Library_management.Forms
             if (manager != null && Crypto.VerifyHashedPassword(manager.Password, TxtPassword.Text))
             {
                 DashboardForm dashboard = new DashboardForm(manager);
-
                 dashboard.ShowDialog();
                 this.Close();
             }
             MessageBox.Show("E-poçt və ya şifrə yalnışdır", "Xəbərdarlıq", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            this.Close();
         }
     }
 }

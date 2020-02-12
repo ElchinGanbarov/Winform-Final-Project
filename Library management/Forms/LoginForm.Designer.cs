@@ -53,7 +53,7 @@
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.ShortcutsEnabled = false;
             this.TxtEmail.Size = new System.Drawing.Size(151, 20);
-            this.TxtEmail.TabIndex = 1;
+            this.TxtEmail.TabIndex = 0;
             // 
             // label2
             // 

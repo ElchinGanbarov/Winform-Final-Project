@@ -19,6 +19,16 @@ namespace Library_management.Models
                
             }
         }
+
+        public List<Book> FilterByName(string name)
+        {
+            using (LibraryDbContext _context = new LibraryDbContext())
+            {
+
+                return _context.Books.Where(p => p.Name.Contains(name)).Include("Genre").ToList();
+
+            }
+        }
         public void Create(Book entity)
         {
             using (LibraryDbContext _context=new LibraryDbContext())

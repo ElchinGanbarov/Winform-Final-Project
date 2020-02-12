@@ -29,3 +29,43 @@ C:\Users\Admin\Desktop\Winform Final Project\Library management\Library manageme
 C:\Users\Admin\Desktop\Winform Final Project\Library management\Library management\obj\Debug\Library_management.Forms.ManagerForm.resources
 C:\Users\Admin\Desktop\Winform Final Project\Library management\Library management\obj\Debug\Library_management.Forms.CustomerCreatedForm.resources
 C:\Users\Admin\Desktop\Winform Final Project\Library management\Library management\obj\Debug\Library_management.Forms.CustomerForm.resources
+C:\Users\Admin\Desktop\Winform-Final-Project\Library management\bin\Debug\Library management.exe.config
+C:\Users\Admin\Desktop\Winform-Final-Project\Library management\bin\Debug\Library management.exe
+C:\Users\Admin\Desktop\Winform-Final-Project\Library management\bin\Debug\Library management.pdb
+C:\Users\Admin\Desktop\Winform-Final-Project\Library management\bin\Debug\CryptoHelper.dll
+C:\Users\Admin\Desktop\Winform-Final-Project\Library management\bin\Debug\EntityFramework.dll
+C:\Users\Admin\Desktop\Winform-Final-Project\Library management\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Admin\Desktop\Winform-Final-Project\Library management\bin\Debug\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Admin\Desktop\Winform-Final-Project\Library management\bin\Debug\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Admin\Desktop\Winform-Final-Project\Library management\bin\Debug\CryptoHelper.xml
+C:\Users\Admin\Desktop\Winform-Final-Project\Library management\bin\Debug\EntityFramework.xml
+C:\Users\Admin\Desktop\Winform-Final-Project\Library management\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Admin\Desktop\Winform-Final-Project\Library management\bin\Debug\Microsoft.AspNetCore.Cryptography.Internal.xml
+C:\Users\Admin\Desktop\Winform-Final-Project\Library management\bin\Debug\Microsoft.AspNetCore.Cryptography.KeyDerivation.xml
+C:\Users\Admin\Desktop\Winform-Final-Project\Library management\obj\Debug\Library Management.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\Winform-Final-Project\Library management\obj\Debug\Library_management.Forms.BookCreatForm.resources
+C:\Users\Admin\Desktop\Winform-Final-Project\Library management\obj\Debug\Library_management.Forms.BookForm.resources
+C:\Users\Admin\Desktop\Winform-Final-Project\Library management\obj\Debug\Library_management.Forms.CustomerCreatedForm.resources
+C:\Users\Admin\Desktop\Winform-Final-Project\Library management\obj\Debug\Library_management.Forms.CustomerForm.resources
+C:\Users\Admin\Desktop\Winform-Final-Project\Library management\obj\Debug\Library_management.Forms.DashboardForm.resources
+C:\Users\Admin\Desktop\Winform-Final-Project\Library management\obj\Debug\Library_management.Forms.LoginForm.resources
+C:\Users\Admin\Desktop\Winform-Final-Project\Library management\obj\Debug\Library_management.Forms.ManagerCreatedForm.resources
+C:\Users\Admin\Desktop\Winform-Final-Project\Library management\obj\Debug\Library_management.Forms.ManagerForm.resources
+C:\Users\Admin\Desktop\Winform-Final-Project\Library management\obj\Debug\Library_management.Migrations.BooksAndCustomersAndGenresAndManagersAndOrdersAndOrderBooks.resources
+C:\Users\Admin\Desktop\Winform-Final-Project\Library management\obj\Debug\Library_management.Migrations.CustomerAndManagerUpdate.resources
+C:\Users\Admin\Desktop\Winform-Final-Project\Library management\obj\Debug\Library_management.Migrations.ManagerStatusAdd.resources
+C:\Users\Admin\Desktop\Winform-Final-Project\Library management\obj\Debug\Library_management.Properties.Resources.resources
+C:\Users\Admin\Desktop\Winform-Final-Project\Library management\obj\Debug\Library Management.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\Winform-Final-Project\Library management\obj\Debug\Library Management.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Winform-Final-Project\Library management\obj\Debug\Library Management.csproj.CopyComplete
+C:\Users\Admin\Desktop\Winform-Final-Project\Library management\obj\Debug\Library management.exe
+C:\Users\Admin\Desktop\Winform-Final-Project\Library management\obj\Debug\Library management.pdb
+C:\Users\Admin\Desktop\Winform-Final-Project\Library management\obj\Debug\Library_management.Forms.OrdersForm.resources
+C:\Users\Admin\Desktop\Winform-Final-Project\Library management\obj\Debug\Library_management.Migrations.OrdersColumnDateChange.resources
+C:\Users\Admin\Desktop\Winform-Final-Project\Library management\obj\Debug\Library_management.Migrations.OrdersBookAdd.resources
+C:\Users\Admin\Desktop\Winform-Final-Project\Library management\obj\Debug\Library_management.Forms.ShowTheBasketForm.resources
+C:\Users\Admin\Desktop\Winform-Final-Project\Library management\obj\Debug\Library_management.Migrations.OrdersbookName.resources
+C:\Users\Admin\Desktop\Winform-Final-Project\Library management\obj\Debug\Library_management.Migrations.orderscustomersmnagers.resources
+C:\Users\Admin\Desktop\Winform-Final-Project\Library management\obj\Debug\Library_management.Migrations.ordercolumtype.resources
+C:\Users\Admin\Desktop\Winform-Final-Project\Library management\obj\Debug\Library_management.Migrations.orderscolumntype.resources
+C:\Users\Admin\Desktop\Winform-Final-Project\Library management\obj\Debug\Library_management.Migrations.orders.resources

@@ -25,6 +25,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -114,6 +115,18 @@
     <Compile Include="Forms\ManagerForm.Designer.cs">
       <DependentUpon>ManagerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\OrdersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OrdersForm.Designer.cs">
+      <DependentUpon>OrdersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ShowTheBasketForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ShowTheBasketForm.Designer.cs">
+      <DependentUpon>ShowTheBasketForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\202002071455065_BooksAndCustomersAndGenresAndManagersAndOrdersAndOrderBooks.cs" />
     <Compile Include="Migrations\202002071455065_BooksAndCustomersAndGenresAndManagersAndOrdersAndOrderBooks.designer.cs">
       <DependentUpon>202002071455065_BooksAndCustomersAndGenresAndManagersAndOrdersAndOrderBooks.cs</DependentUpon>
@@ -125,6 +138,34 @@
     <Compile Include="Migrations\202002071645238_ManagerStatusAdd.cs" />
     <Compile Include="Migrations\202002071645238_ManagerStatusAdd.designer.cs">
       <DependentUpon>202002071645238_ManagerStatusAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002110024433_OrdersColumnDateChange.cs" />
+    <Compile Include="Migrations\202002110024433_OrdersColumnDateChange.designer.cs">
+      <DependentUpon>202002110024433_OrdersColumnDateChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002111536305_OrdersBookAdd.cs" />
+    <Compile Include="Migrations\202002111536305_OrdersBookAdd.designer.cs">
+      <DependentUpon>202002111536305_OrdersBookAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002111951112_OrdersbookName.cs" />
+    <Compile Include="Migrations\202002111951112_OrdersbookName.designer.cs">
+      <DependentUpon>202002111951112_OrdersbookName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002112003471_orderscustomersmnagers.cs" />
+    <Compile Include="Migrations\202002112003471_orderscustomersmnagers.designer.cs">
+      <DependentUpon>202002112003471_orderscustomersmnagers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002112156396_ordercolumtype.cs" />
+    <Compile Include="Migrations\202002112156396_ordercolumtype.designer.cs">
+      <DependentUpon>202002112156396_ordercolumtype.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002112217368_orderscolumntype.cs" />
+    <Compile Include="Migrations\202002112217368_orderscolumntype.designer.cs">
+      <DependentUpon>202002112217368_orderscolumntype.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002112236557_orders.cs" />
+    <Compile Include="Migrations\202002112236557_orders.designer.cs">
+      <DependentUpon>202002112236557_orders.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Book.cs" />
@@ -138,6 +179,7 @@
     <Compile Include="Models\IRepository.cs" />
     <Compile Include="Models\Manager.cs" />
     <Compile Include="Models\ManagerDal.cs" />
+    <Compile Include="Models\OrderBookDal.cs" />
     <Compile Include="Models\OrderDal.cs" />
     <Compile Include="Models\Orders.cs" />
     <Compile Include="Models\OrderBook.cs" />
@@ -167,6 +209,12 @@
     <EmbeddedResource Include="Forms\ManagerForm.resx">
       <DependentUpon>ManagerForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OrdersForm.resx">
+      <DependentUpon>OrdersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ShowTheBasketForm.resx">
+      <DependentUpon>ShowTheBasketForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002071455065_BooksAndCustomersAndGenresAndManagersAndOrdersAndOrderBooks.resx">
       <DependentUpon>202002071455065_BooksAndCustomersAndGenresAndManagersAndOrdersAndOrderBooks.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,6 +223,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002071645238_ManagerStatusAdd.resx">
       <DependentUpon>202002071645238_ManagerStatusAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002110024433_OrdersColumnDateChange.resx">
+      <DependentUpon>202002110024433_OrdersColumnDateChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002111536305_OrdersBookAdd.resx">
+      <DependentUpon>202002111536305_OrdersBookAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002111951112_OrdersbookName.resx">
+      <DependentUpon>202002111951112_OrdersbookName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002112003471_orderscustomersmnagers.resx">
+      <DependentUpon>202002112003471_orderscustomersmnagers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002112156396_ordercolumtype.resx">
+      <DependentUpon>202002112156396_ordercolumtype.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002112217368_orderscolumntype.resx">
+      <DependentUpon>202002112217368_orderscolumntype.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002112236557_orders.resx">
+      <DependentUpon>202002112236557_orders.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

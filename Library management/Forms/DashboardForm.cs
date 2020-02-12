@@ -48,5 +48,12 @@ namespace Library_management.Forms
 
             customerForm.ShowDialog();
         }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            OrdersForm orderForm = new OrdersForm(manager);
+
+            orderForm.ShowDialog();
+        }
     }
 }
