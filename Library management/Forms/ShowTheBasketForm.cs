@@ -15,6 +15,7 @@ namespace Library_management.Forms
     {
         private OrderDal _orderDal;
         private int _id;
+        private Orders orders;
         public ShowTheBasketForm(int id)
         {
             _id = id;
@@ -55,14 +56,13 @@ namespace Library_management.Forms
 
         }
 
+        //
         private void BtnUpdateShowBasketForm_Click(object sender, EventArgs e)
         {
-            Orders orders = new Orders
-            {
-                Id = Convert.ToInt32(dgwShowBasketOrder.CurrentRow.Cells[0].Value),
-                BookCount = Convert.ToInt32(textBox1.Text)
-
-            };
+            int id = Convert.ToInt32(dgwShowBasketOrder.CurrentRow.Cells[0].Value);
+            orders = _orderDal.GetById(id);
+            orders.BookCount = Convert.ToInt32(textBox1.Text);
+            _orderDal.Update(orders);
             LoadAllDataForTheBasket();
         }
     }

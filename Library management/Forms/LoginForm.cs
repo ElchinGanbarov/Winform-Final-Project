@@ -21,7 +21,7 @@ namespace Library_management.Forms
             InitializeComponent();
             _dbContext = new LibraryDbContext();
         }
-
+        //Dashboard Creat //
         private void Button1_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(TxtEmail.Text))
@@ -29,7 +29,6 @@ namespace Library_management.Forms
                 MessageBox.Show("E-poçt yazın");
                 return;
             }
-
             if (string.IsNullOrEmpty(TxtPassword.Text))
             {
                 MessageBox.Show("Şifrə yazın");
@@ -42,7 +41,11 @@ namespace Library_management.Forms
                 dashboard.ShowDialog();
                 this.Close();
             }
-            MessageBox.Show("E-poçt və ya şifrə yalnışdır", "Xəbərdarlıq", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else
+            {
+                MessageBox.Show("E-poçt və ya şifrə yalnışdır", "Xəbərdarlıq", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
         }
     }
 }

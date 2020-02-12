@@ -19,7 +19,6 @@ namespace Library_management.Data
         public DbSet<Genre> Genres { get; set; }
         public DbSet<Manager> Managers { get; set; }
         public DbSet<Orders> Orders { get; set; }
-        public DbSet<OrderBook> OrderBooks { get; set; }
 
     }
 }

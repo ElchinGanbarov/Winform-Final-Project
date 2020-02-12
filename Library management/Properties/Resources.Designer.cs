@@ -63,6 +63,16 @@ namespace Library_management.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _14850286_login_background {
+            get {
+                object obj = ResourceManager.GetObject("14850286-login-background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap library_100616524_large {
             get {
                 object obj = ResourceManager.GetObject("library-100616524-large", resourceCulture);

@@ -10,6 +10,16 @@ namespace Library_management.Models
 {
     public class OrderDal : IRepository<Orders>
     {
+
+        public Orders GetById(int id)
+        {
+            using (LibraryDbContext _context = new LibraryDbContext())
+            {
+
+                return _context.Orders.Find(id);
+
+            }
+        }
         public void Create(Orders orders)
         {
             using (LibraryDbContext _context = new LibraryDbContext())

@@ -69,3 +69,5 @@ C:\Users\Admin\Desktop\Winform-Final-Project\Library management\obj\Debug\Librar
 C:\Users\Admin\Desktop\Winform-Final-Project\Library management\obj\Debug\Library_management.Migrations.ordercolumtype.resources
 C:\Users\Admin\Desktop\Winform-Final-Project\Library management\obj\Debug\Library_management.Migrations.orderscolumntype.resources
 C:\Users\Admin\Desktop\Winform-Final-Project\Library management\obj\Debug\Library_management.Migrations.orders.resources
+C:\Users\Admin\Desktop\Winform-Final-Project\Library management\obj\Debug\Library_management.Migrations.status.resources
+C:\Users\Admin\Desktop\Winform-Final-Project\Library management\obj\Debug\Library_management.Migrations.orderbookdelete.resources

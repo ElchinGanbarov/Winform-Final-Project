@@ -23,8 +23,9 @@ namespace Library_management.Models
         [ForeignKey("Books")]
         public int BookId { get; set; }
         public Book Books { get; set; }
+        [Column(TypeName ="bit")]
+        public bool Status { get; set; }
 
-        public List<OrderBook> OrderBooks { get; set; }
 
     }
 }

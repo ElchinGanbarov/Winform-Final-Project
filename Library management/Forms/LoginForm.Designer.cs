@@ -54,6 +54,7 @@
             this.TxtEmail.ShortcutsEnabled = false;
             this.TxtEmail.Size = new System.Drawing.Size(151, 20);
             this.TxtEmail.TabIndex = 0;
+            this.TxtEmail.Text = "ilkin@gmail.com";
             // 
             // label2
             // 
@@ -72,6 +73,7 @@
             this.TxtPassword.Name = "TxtPassword";
             this.TxtPassword.Size = new System.Drawing.Size(151, 20);
             this.TxtPassword.TabIndex = 1;
+            this.TxtPassword.Text = "123456";
             this.TxtPassword.UseSystemPasswordChar = true;
             // 
             // button1
@@ -90,7 +92,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(211, 223);
+            this.BackgroundImage = global::Library_management.Properties.Resources._14850286_login_background;
+            this.ClientSize = new System.Drawing.Size(211, 229);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TxtPassword);

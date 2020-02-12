@@ -21,6 +21,10 @@ namespace Library_management.Forms
             InitializeComponent();
         }
 
+
+        #region Button Click Events
+
+        //Books Form Open//
         private void BtnBooks_Click(object sender, EventArgs e)
         {
             BookForm bookForm = new BookForm();
@@ -28,6 +32,7 @@ namespace Library_management.Forms
             bookForm.ShowDialog();
         }
 
+        //Managers Form Open//
         private void BtnManagers_Click(object sender, EventArgs e)
         {
             if (manager.Level == ManagerLevel.Admin)
@@ -42,6 +47,7 @@ namespace Library_management.Forms
               
         }
 
+        //Customers Form Open//
         private void BtnCustomers_Click(object sender, EventArgs e)
         {
             CustomerForm customerForm = new CustomerForm();
@@ -49,11 +55,14 @@ namespace Library_management.Forms
             customerForm.ShowDialog();
         }
 
+        //Order Form Open//
         private void Button1_Click(object sender, EventArgs e)
         {
             OrdersForm orderForm = new OrdersForm(manager);
 
             orderForm.ShowDialog();
         }
+
+        #endregion
     }
 }

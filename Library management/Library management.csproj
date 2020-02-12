@@ -167,6 +167,14 @@
     <Compile Include="Migrations\202002112236557_orders.designer.cs">
       <DependentUpon>202002112236557_orders.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002121057171_status.cs" />
+    <Compile Include="Migrations\202002121057171_status.designer.cs">
+      <DependentUpon>202002121057171_status.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002122022392_orderbookdelete.cs" />
+    <Compile Include="Migrations\202002122022392_orderbookdelete.designer.cs">
+      <DependentUpon>202002122022392_orderbookdelete.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\BookDal.cs" />
@@ -179,10 +187,8 @@
     <Compile Include="Models\IRepository.cs" />
     <Compile Include="Models\Manager.cs" />
     <Compile Include="Models\ManagerDal.cs" />
-    <Compile Include="Models\OrderBookDal.cs" />
     <Compile Include="Models\OrderDal.cs" />
     <Compile Include="Models\Orders.cs" />
-    <Compile Include="Models\OrderBook.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\BookCreatForm.resx">
@@ -245,6 +251,12 @@
     <EmbeddedResource Include="Migrations\202002112236557_orders.resx">
       <DependentUpon>202002112236557_orders.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002121057171_status.resx">
+      <DependentUpon>202002121057171_status.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002122022392_orderbookdelete.resx">
+      <DependentUpon>202002122022392_orderbookdelete.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -271,6 +283,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\library-100616524-large.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14850286-login-background.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

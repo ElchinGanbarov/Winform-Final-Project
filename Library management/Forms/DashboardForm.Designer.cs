@@ -112,6 +112,7 @@
             this.Controls.Add(this.BtnManagers);
             this.Controls.Add(this.BtnBooks);
             this.Name = "DashboardForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DashboardForm";
             this.ResumeLayout(false);
 
