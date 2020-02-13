@@ -28,7 +28,6 @@ namespace Library_management.Forms
         private void BtnBooks_Click(object sender, EventArgs e)
         {
             BookForm bookForm = new BookForm();
-
             bookForm.ShowDialog();
         }
 
@@ -43,15 +42,13 @@ namespace Library_management.Forms
             else
             {
                 MessageBox.Show("Sadece Admin daxil ola biler!");
-            }    
-              
+            }       
         }
 
         //Customers Form Open//
         private void BtnCustomers_Click(object sender, EventArgs e)
         {
             CustomerForm customerForm = new CustomerForm();
-
             customerForm.ShowDialog();
         }
 
@@ -59,10 +56,10 @@ namespace Library_management.Forms
         private void Button1_Click(object sender, EventArgs e)
         {
             OrdersForm orderForm = new OrdersForm(manager);
-
             orderForm.ShowDialog();
         }
 
         #endregion
+
     }
 }

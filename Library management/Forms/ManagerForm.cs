@@ -64,21 +64,27 @@ namespace Library_management.Forms
         }
 
         #endregion
+        //Manager Created and Updata DataGriedView Add and Update//
         private void ManagerCreated_AddManager(object sender, EventArgs e)
         {
             FillDataManager();
         }
-
+        //ManagerForm-DataGridView-RowHeaderMouseClick Choose Id//
         private void DgvManagerShow_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            id =(int)DgvManagerShow.Rows[e.RowIndex].Cells[0].Value;
-            _manager = _managerDal.GetById(id);
-            LblSelected.Show();
-            LblSelectedName.Show();
-            BtnDelete.Show();
-            BtnUpdate.Show();
-            LblSelectedName.Text = _manager.Name;
+            try
+            {
+                id = (int)DgvManagerShow.Rows[e.RowIndex].Cells[0].Value;
+                _manager = _managerDal.GetById(id);
+                LblSelected.Show();
+                LblSelectedName.Show();
+                BtnDelete.Show();
+                BtnUpdate.Show();
+                LblSelectedName.Text = _manager.Name;
+            }
+            catch { }
         }
+        //Coohe Manager Reset//
         private void Reset()
         {
             _manager = null;
@@ -87,9 +93,5 @@ namespace Library_management.Forms
             BtnUpdate.Show();
             FillDataManager();
         }
-
-       
-
-       
     }
 }

@@ -57,19 +57,19 @@ namespace Library_management.Forms
             }
         }
         #endregion
-
+        //Customer Creat Event//
         private void BtnAdd_Click(object sender, EventArgs e)
         {
             CustomerCreatedForm customerCreated = new CustomerCreatedForm();
             customerCreated.AddCustomer += CustomerCreated_AddCustomer;
             customerCreated.ShowDialog();
         }
-
+        //DataGridWiev Add Data//
         private void CustomerCreated_AddCustomer(object sender, EventArgs e)
         {
             FillListCustomerData();
         }
-
+        //Form Load Events//
         private void OrdersForm_Load(object sender, EventArgs e)
         {
             FillListCustomerData();
@@ -84,7 +84,10 @@ namespace Library_management.Forms
             dgwBookSearchForOrder.Rows.Clear();
             foreach (Book item in books)
             {
-                dgwBookSearchForOrder.Rows.Add(item.Id, item.Name, item.Price, item.Count, item.Genre.Name);
+                if (item.Count > 0)
+                {
+                    dgwBookSearchForOrder.Rows.Add(item.Id, item.Name, item.Price, item.Count, item.Genre.Name);
+                }
             }
         }
         //Customer Add DataGridView//
@@ -99,33 +102,41 @@ namespace Library_management.Forms
         }
 
         #endregion
-
+        //Customers Find Id//
         private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            tbxIdentityOfCustomerOrderTime.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-            id =(int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
+            try
+            {
+                tbxIdentityOfCustomerOrderTime.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+                id = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
+            }
+            catch { }
         }
-
+        //DataGridWiev Searc Book//
         private void DgwBookSearchForOrder_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            _bookid = (int)dgwBookSearchForOrder.Rows[e.RowIndex].Cells[0].Value;
-            _book = _bookDal.GetById(_bookid);
-            tbxBookNameOrderTime.Text = dgwBookSearchForOrder.CurrentRow.Cells[1].Value.ToString();
-            if (string.IsNullOrEmpty(tbxBookCount.Text.Trim()))
+            try
             {
-                tbxBookPriceOrderTime.Text = dgwBookSearchForOrder.CurrentRow.Cells[2].Value.ToString();
+                _bookid = (int)dgwBookSearchForOrder.Rows[e.RowIndex].Cells[0].Value;
+                _book = _bookDal.GetById(_bookid);
+                tbxBookNameOrderTime.Text = dgwBookSearchForOrder.CurrentRow.Cells[1].Value.ToString();
+                if (string.IsNullOrEmpty(tbxBookCount.Text.Trim()))
+                {
+                    tbxBookPriceOrderTime.Text = dgwBookSearchForOrder.CurrentRow.Cells[2].Value.ToString();
+                }
+                else
+                {
+                    int power = Convert.ToInt32(tbxBookCount.Text.Trim());
+                    double price = Convert.ToDouble(dgwBookSearchForOrder.CurrentRow.Cells[2].Value);
+                    double result = power * price;
+                    tbxBookPriceOrderTime.Text = result.ToString();
+                }
             }
-            else
-            {
-                int power = Convert.ToInt32(tbxBookCount.Text.Trim());
-                double price = Convert.ToDouble(dgwBookSearchForOrder.CurrentRow.Cells[2].Value);
-                double result = power * price;
-                tbxBookPriceOrderTime.Text = result.ToString();
-            }
+            catch { }
 
         }
 
-
+        //Database Add Orders//
         private void BtnBasket_Click(object sender, EventArgs e)
         {
             if (_book.Count > 0)
@@ -155,10 +166,19 @@ namespace Library_management.Forms
             }
         }
 
+        //The must Wrtie Book Count//
         private void TbxBookCount_TextChanged(object sender, EventArgs e)
         {
             try
             {
+                if (tbxBookCount.Text.Length!=0)
+                {
+                    BtnBasket.Enabled = true;
+                }
+                else
+                {
+                    BtnBasket.Enabled = false;
+                }
                 int BookCount = Convert.ToInt32(dgwBookSearchForOrder.CurrentRow.Cells[3].Value);
                 wantedCountOfBook = Convert.ToInt32(tbxBookCount.Text.Trim());
                 if (string.IsNullOrEmpty(tbxBookCount.Text.Trim()))
@@ -193,6 +213,7 @@ namespace Library_management.Forms
             }
         }
      
+        //DateTimePicker Value Change Book Price Count//
         private void DtPckReturnTime_ValueChanged(object sender, EventArgs e)
         {
             tbxBookCount.Text = "";
@@ -216,11 +237,24 @@ namespace Library_management.Forms
                 MessageBox.Show("Secdiyiniz tarix yalnisdir.");
             }
         }
-
+        //Today Order Basket View//
         private void BtnShowBasket_Click(object sender, EventArgs e)
         {
             ShowTheBasketForm showTheBasket = new ShowTheBasketForm(id);
             showTheBasket.ShowDialog();
+        }
+        //BookReturnForm wiev//
+        private void BtnReturnOrderNav_Click(object sender, EventArgs e)
+        {
+            BookReturnForm bookReturn = new BookReturnForm();
+            bookReturn.BookAdd += BookReturn_BookAdd;
+            bookReturn.ShowDialog();
+
+        }
+        //Order Close BookCount Increment//
+        private void BookReturn_BookAdd(object sender, EventArgs e)
+        {
+            FillListBookData();
         }
     }
 }

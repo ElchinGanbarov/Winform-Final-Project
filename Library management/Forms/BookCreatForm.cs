@@ -73,10 +73,10 @@ namespace Library_management.Forms
         }
 
         #endregion
-        // Book Create       
+        // Book Create Event//       
         private void BtnSave_Click(object sender, EventArgs e)
         {
-          
+          //Book Update Event//
             CmbCombobox select = CmbGenre.SelectedItem as CmbCombobox;
             if (_isUpdate)
             { 
@@ -110,7 +110,7 @@ namespace Library_management.Forms
             }
             this.Close();
         }
-
+        // Cancal Event//
         private void BtnCancel_Click(object sender, EventArgs e)
         {
             this.Close();

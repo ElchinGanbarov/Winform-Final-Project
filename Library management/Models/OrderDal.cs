@@ -53,10 +53,28 @@ namespace Library_management.Models
         {
             using (LibraryDbContext _context = new LibraryDbContext())
             {
-                var result = _context.Orders.Include("Books").Include("Customers").Include("Managers").Where(o => o.GivingTime.Value.Day == DateTime.Now.Day && o.CustomerId == id).ToList();
+                var result = _context.Orders.Include("Books").Include("Customers").Include("Managers").Where(o => o.GivingTime.Value.Day == DateTime.Now.Day && o.CustomerId == id && o.Status==false).ToList();
                 return result;
             }
         }
+
+        public List<Orders> GetForAllReturnOrders()
+        {
+            using (LibraryDbContext _context = new LibraryDbContext())
+            {
+                var result = _context.Orders.Include("Books").Include("Customers").Include("Managers").Where(o => o.Status == false).ToList();
+                return result;
+            }
+        }
+        public List<Orders> GetByIdentify(string id)
+        {
+            using (LibraryDbContext _context = new LibraryDbContext())
+            {
+                return _context.Orders.Include("Books").Include("Customers").Include("Managers").Where(p => p.Customers.IdentityNumber.Contains(id) && p.Status==false).ToList();
+
+            }
+        }
+
 
         public void Update(Orders orders)
         {

@@ -9,8 +9,11 @@ namespace Library_management.Models
    public class Orders
     {
         public int Id { get; set; }   
+        [Column(TypeName ="date")]
         public DateTime? GivingTime { get; set; }
+        [Column(TypeName = "date")]
         public DateTime? ReturnTime { get; set; }
+        [Column(TypeName = "date")]
         public DateTime? DeadLine { get; set; }
         public int? BookCount { get; set; }
         public decimal? LastMoney { get; set; }

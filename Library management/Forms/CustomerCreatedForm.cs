@@ -28,6 +28,8 @@ namespace Library_management.Forms
                 FilUpdateData();
             }
         }
+
+        //Customer Update Method//
         public void FilUpdateData()
         {
             TxtName.Text = _customer.Name;
@@ -38,10 +40,13 @@ namespace Library_management.Forms
             BtnSave.Text = "Update";
             this.Text = "Yenile";
         }
+        //Cancel Button Click//
         private void BtnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        //Customer Add Database//
         private void BtnSave_Click(object sender, EventArgs e)
         {
             if (_isUpdate)

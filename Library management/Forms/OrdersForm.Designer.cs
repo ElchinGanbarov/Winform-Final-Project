@@ -58,6 +58,7 @@
             this.lblBookCount = new System.Windows.Forms.Label();
             this.dtPckReturnTime = new System.Windows.Forms.DateTimePicker();
             this.tbxBookCount = new System.Windows.Forms.TextBox();
+            this.btnReturnOrderNav = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwBookSearchForOrder)).BeginInit();
             this.SuspendLayout();
@@ -100,9 +101,9 @@
             this.Column4,
             this.Column5,
             this.Column6});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 42);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 49);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(458, 131);
+            this.dataGridView1.Size = new System.Drawing.Size(458, 124);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellClick);
             // 
@@ -141,7 +142,7 @@
             // 
             this.tbxIdentityOfCustomerOrderTime.Enabled = false;
             this.tbxIdentityOfCustomerOrderTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxIdentityOfCustomerOrderTime.Location = new System.Drawing.Point(693, 76);
+            this.tbxIdentityOfCustomerOrderTime.Location = new System.Drawing.Point(686, 18);
             this.tbxIdentityOfCustomerOrderTime.Name = "tbxIdentityOfCustomerOrderTime";
             this.tbxIdentityOfCustomerOrderTime.Size = new System.Drawing.Size(105, 20);
             this.tbxIdentityOfCustomerOrderTime.TabIndex = 5;
@@ -150,7 +151,7 @@
             // 
             this.tbxBookNameOrderTime.Enabled = false;
             this.tbxBookNameOrderTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxBookNameOrderTime.Location = new System.Drawing.Point(693, 102);
+            this.tbxBookNameOrderTime.Location = new System.Drawing.Point(686, 44);
             this.tbxBookNameOrderTime.Name = "tbxBookNameOrderTime";
             this.tbxBookNameOrderTime.Size = new System.Drawing.Size(105, 20);
             this.tbxBookNameOrderTime.TabIndex = 5;
@@ -159,14 +160,16 @@
             // 
             this.tbxBookPriceOrderTime.Enabled = false;
             this.tbxBookPriceOrderTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxBookPriceOrderTime.Location = new System.Drawing.Point(693, 128);
+            this.tbxBookPriceOrderTime.Location = new System.Drawing.Point(686, 70);
             this.tbxBookPriceOrderTime.Name = "tbxBookPriceOrderTime";
             this.tbxBookPriceOrderTime.Size = new System.Drawing.Size(105, 20);
             this.tbxBookPriceOrderTime.TabIndex = 5;
             // 
             // BtnBasket
             // 
-            this.BtnBasket.Location = new System.Drawing.Point(623, 209);
+            this.BtnBasket.Enabled = false;
+            this.BtnBasket.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBasket.Location = new System.Drawing.Point(616, 151);
             this.BtnBasket.Name = "BtnBasket";
             this.BtnBasket.Size = new System.Drawing.Size(175, 32);
             this.BtnBasket.TabIndex = 6;
@@ -176,7 +179,8 @@
             // 
             // btnShowBasket
             // 
-            this.btnShowBasket.Location = new System.Drawing.Point(623, 247);
+            this.btnShowBasket.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShowBasket.Location = new System.Drawing.Point(616, 189);
             this.btnShowBasket.Name = "btnShowBasket";
             this.btnShowBasket.Size = new System.Drawing.Size(175, 32);
             this.btnShowBasket.TabIndex = 6;
@@ -187,7 +191,7 @@
             // lblOrderTimeIdentityId
             // 
             this.lblOrderTimeIdentityId.AutoSize = true;
-            this.lblOrderTimeIdentityId.Location = new System.Drawing.Point(599, 81);
+            this.lblOrderTimeIdentityId.Location = new System.Drawing.Point(592, 23);
             this.lblOrderTimeIdentityId.Name = "lblOrderTimeIdentityId";
             this.lblOrderTimeIdentityId.Size = new System.Drawing.Size(88, 13);
             this.lblOrderTimeIdentityId.TabIndex = 8;
@@ -196,7 +200,7 @@
             // lblBookNameOrderTime
             // 
             this.lblBookNameOrderTime.AutoSize = true;
-            this.lblBookNameOrderTime.Location = new System.Drawing.Point(632, 105);
+            this.lblBookNameOrderTime.Location = new System.Drawing.Point(625, 47);
             this.lblBookNameOrderTime.Name = "lblBookNameOrderTime";
             this.lblBookNameOrderTime.Size = new System.Drawing.Size(55, 13);
             this.lblBookNameOrderTime.TabIndex = 8;
@@ -205,7 +209,7 @@
             // lblBookPriceOrderTime
             // 
             this.lblBookPriceOrderTime.AutoSize = true;
-            this.lblBookPriceOrderTime.Location = new System.Drawing.Point(613, 131);
+            this.lblBookPriceOrderTime.Location = new System.Drawing.Point(606, 73);
             this.lblBookPriceOrderTime.Name = "lblBookPriceOrderTime";
             this.lblBookPriceOrderTime.Size = new System.Drawing.Size(74, 13);
             this.lblBookPriceOrderTime.TabIndex = 8;
@@ -273,17 +277,17 @@
             // lblReturnTime
             // 
             this.lblReturnTime.AutoSize = true;
-            this.lblReturnTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReturnTime.Location = new System.Drawing.Point(535, 160);
+            this.lblReturnTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReturnTime.Location = new System.Drawing.Point(496, 100);
             this.lblReturnTime.Name = "lblReturnTime";
-            this.lblReturnTime.Size = new System.Drawing.Size(152, 13);
+            this.lblReturnTime.Size = new System.Drawing.Size(184, 16);
             this.lblReturnTime.TabIndex = 8;
             this.lblReturnTime.Text = "Qaytarilma Vaxtini Secin :";
             // 
             // lblBookCount
             // 
             this.lblBookCount.AutoSize = true;
-            this.lblBookCount.Location = new System.Drawing.Point(620, 186);
+            this.lblBookCount.Location = new System.Drawing.Point(613, 128);
             this.lblBookCount.Name = "lblBookCount";
             this.lblBookCount.Size = new System.Drawing.Size(67, 13);
             this.lblBookCount.TabIndex = 8;
@@ -291,7 +295,7 @@
             // 
             // dtPckReturnTime
             // 
-            this.dtPckReturnTime.Location = new System.Drawing.Point(693, 154);
+            this.dtPckReturnTime.Location = new System.Drawing.Point(686, 96);
             this.dtPckReturnTime.Name = "dtPckReturnTime";
             this.dtPckReturnTime.Size = new System.Drawing.Size(105, 20);
             this.dtPckReturnTime.TabIndex = 10;
@@ -300,17 +304,31 @@
             // tbxBookCount
             // 
             this.tbxBookCount.Enabled = false;
-            this.tbxBookCount.Location = new System.Drawing.Point(693, 183);
+            this.tbxBookCount.Location = new System.Drawing.Point(686, 125);
             this.tbxBookCount.Name = "tbxBookCount";
             this.tbxBookCount.Size = new System.Drawing.Size(105, 20);
             this.tbxBookCount.TabIndex = 11;
             this.tbxBookCount.TextChanged += new System.EventHandler(this.TbxBookCount_TextChanged);
             // 
+            // btnReturnOrderNav
+            // 
+            this.btnReturnOrderNav.BackColor = System.Drawing.Color.LightSalmon;
+            this.btnReturnOrderNav.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReturnOrderNav.Location = new System.Drawing.Point(616, 227);
+            this.btnReturnOrderNav.Name = "btnReturnOrderNav";
+            this.btnReturnOrderNav.Size = new System.Drawing.Size(175, 41);
+            this.btnReturnOrderNav.TabIndex = 12;
+            this.btnReturnOrderNav.Text = "SIFARIS QAYTAR";
+            this.btnReturnOrderNav.UseVisualStyleBackColor = false;
+            this.btnReturnOrderNav.Click += new System.EventHandler(this.BtnReturnOrderNav_Click);
+            // 
             // OrdersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(908, 450);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(806, 385);
+            this.Controls.Add(this.btnReturnOrderNav);
             this.Controls.Add(this.tbxBookCount);
             this.Controls.Add(this.dtPckReturnTime);
             this.Controls.Add(this.tbxSearchForBookOrder);
@@ -331,6 +349,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TxtCustomerIdentity);
             this.Name = "OrdersForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrdersForm";
             this.Load += new System.EventHandler(this.OrdersForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -372,5 +391,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.Button btnReturnOrderNav;
     }
 }

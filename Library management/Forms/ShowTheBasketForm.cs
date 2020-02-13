@@ -22,7 +22,7 @@ namespace Library_management.Forms
             _orderDal = new OrderDal();
             InitializeComponent();
         }
-
+        //Order Delete//
         private void Button1_Click(object sender, EventArgs e)
         {
             Orders orders = new Orders
@@ -32,12 +32,12 @@ namespace Library_management.Forms
             _orderDal.Delete(orders);
             LoadAllDataForTheBasket();
         }
-
+        //ShowTheBasketForm_Load Add Order Data//
         private void ShowTheBasketForm_Load(object sender, EventArgs e)
         {
             LoadAllDataForTheBasket();
         }
-
+        //Order View Form Load//
         private void LoadAllDataForTheBasket()
         {
             List<Orders> orders = _orderDal.GetForBasket(_id);
@@ -48,15 +48,20 @@ namespace Library_management.Forms
             }
         }
 
+        //DgwShowBasketOrder_CellClick Choose Order//
         private void DgwShowBasketOrder_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            btnDeleteFromBasketShow.Enabled = true;
-            btnUpdateShowBasketForm.Enabled = true;
-            textBox1.Text = dgwShowBasketOrder.CurrentRow.Cells[2].Value.ToString();
+            try
+            {
+                btnDeleteFromBasketShow.Enabled = true;
+                btnUpdateShowBasketForm.Enabled = true;
+                textBox1.Text = dgwShowBasketOrder.CurrentRow.Cells[2].Value.ToString();
 
+            }
+            catch { }
         }
 
-        //
+        //Choose Order Update BookCount//
         private void BtnUpdateShowBasketForm_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(dgwShowBasketOrder.CurrentRow.Cells[0].Value);

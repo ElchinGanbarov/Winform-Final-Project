@@ -42,6 +42,7 @@ namespace Library_management.Forms
             bookCreatForm.ShowDialog();
         }
 
+        //Book Add DataGridView with Event//
         private void BookCreatForm_AddBook(object sender, EventArgs e)
         {
             FillDataAdd();
@@ -77,16 +78,18 @@ namespace Library_management.Forms
         //DataGridView Row Header//
         private void DataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            id =(int)DgvAddBooks.Rows[e.RowIndex].Cells[0].Value;
-            _book = _bookDal.GetById(id);
-            SelectedLabel.Show();
-            BtnDelete.Show();
-            BtnUpdate.Show();
-            SelectedName.Text = _book.Name;
+            try
+            {
+                id = (int)DgvAddBooks.Rows[e.RowIndex].Cells[0].Value;
+                _book = _bookDal.GetById(id);
+                SelectedLabel.Show();
+                BtnDelete.Show();
+                BtnUpdate.Show();
+                SelectedName.Text = _book.Name;
+            }
+            catch { }
         }
 
-       
-       
          //Choose Book Reset//     
         private void Reset()
         {

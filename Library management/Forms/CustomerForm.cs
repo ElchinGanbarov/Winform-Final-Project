@@ -36,7 +36,7 @@ namespace Library_management.Forms
         }
 
         #endregion
-        //Customer Read//
+        //Customer Datagridview add//
         private void CustomerCreatedForm_AddCustomer(object sender, EventArgs e)
         {
             FillDataCustomer();
@@ -55,17 +55,21 @@ namespace Library_management.Forms
         //Choose Customer//
         private void DgvCustomerShow_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-             id=(int)DgvCustomerShow.Rows[e.RowIndex].Cells[0].Value;
-            _customer = _customerDal.GetById(id);
-            LblSelected.Show();
-            LblSelectedName.Show();
-            BtnDeleted.Show();
-            BtnUpdate.Show();
-            LblSelectedName.Text = _customer.Name;
+            try
+            {
+                id = (int)DgvCustomerShow.Rows[e.RowIndex].Cells[0].Value;
+                _customer = _customerDal.GetById(id);
+                LblSelected.Show();
+                LblSelectedName.Show();
+                BtnDeleted.Show();
+                BtnUpdate.Show();
+                LblSelectedName.Text = _customer.Name;
+            }
+            catch { }
 
         }
 
-        //Deleted Event//
+        //Customer Deleted Database//
         private void BtnDeleted_Click(object sender, EventArgs e)
         {
             DialogResult r = MessageBox.Show("Əminsinizmi.?", "Silməyə", MessageBoxButtons.YesNo);
@@ -76,6 +80,7 @@ namespace Library_management.Forms
             }
            
         }
+        //Customer Update Database//
         private void BtnUpdate_Click(object sender, EventArgs e)
         {
             CustomerCreatedForm customerUpdate = new CustomerCreatedForm(true, _customer);
@@ -86,7 +91,7 @@ namespace Library_management.Forms
       
         #endregion
 
-        //ResetMethods
+        //Choose Customer ResetMethods//
         private void Reset()
         {
             _customer = null;
