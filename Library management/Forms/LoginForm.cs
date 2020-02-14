@@ -40,8 +40,7 @@ namespace Library_management.Forms
             {
                 DashboardForm dashboard = new DashboardForm(manager);
                 dashboard.Show();
-                this.Hide();
-                return;
+                
                 
             }
             else

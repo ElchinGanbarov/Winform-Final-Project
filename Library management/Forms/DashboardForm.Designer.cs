@@ -33,6 +33,7 @@
             this.BtnCustomers = new System.Windows.Forms.Button();
             this.BtnReports = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.ReturnsBooksShow = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BtnBooks
@@ -79,7 +80,7 @@
             this.BtnReports.BackColor = System.Drawing.Color.Tan;
             this.BtnReports.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnReports.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.BtnReports.Location = new System.Drawing.Point(12, 244);
+            this.BtnReports.Location = new System.Drawing.Point(12, 303);
             this.BtnReports.Name = "BtnReports";
             this.BtnReports.Size = new System.Drawing.Size(118, 46);
             this.BtnReports.TabIndex = 4;
@@ -99,14 +100,28 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
+            // ReturnsBooksShow
+            // 
+            this.ReturnsBooksShow.BackColor = System.Drawing.Color.Tan;
+            this.ReturnsBooksShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReturnsBooksShow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.ReturnsBooksShow.Location = new System.Drawing.Point(12, 231);
+            this.ReturnsBooksShow.Name = "ReturnsBooksShow";
+            this.ReturnsBooksShow.Size = new System.Drawing.Size(118, 66);
+            this.ReturnsBooksShow.TabIndex = 4;
+            this.ReturnsBooksShow.Text = "Kitab qaytaranlari izleme";
+            this.ReturnsBooksShow.UseVisualStyleBackColor = false;
+            this.ReturnsBooksShow.Click += new System.EventHandler(this.ReturnsBooksShow_Click);
+            // 
             // DashboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Library_management.Properties.Resources.library_100616524_large;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(652, 337);
+            this.ClientSize = new System.Drawing.Size(652, 357);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.ReturnsBooksShow);
             this.Controls.Add(this.BtnReports);
             this.Controls.Add(this.BtnCustomers);
             this.Controls.Add(this.BtnManagers);
@@ -124,5 +139,6 @@
         private System.Windows.Forms.Button BtnCustomers;
         private System.Windows.Forms.Button BtnReports;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button ReturnsBooksShow;
     }
 }

@@ -84,11 +84,26 @@ namespace Library_management.Forms
                     return;
                 }
 
-                if (!TxtIdentify.Text.IsNumber() || TxtIdentify.Text.Length != 8)
+                if (!TxtIdentify.Text.IsNumber() || TxtIdentify.Text.Length != 8 )
                 {
                     MessageBox.Show("Kimlik nomresini duzgun qeyd edin !", "Xəbərdarlıq", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
+                List<Customer> customers = _customerDal.GetAll();
+                foreach(Customer item in customers)
+                {
+                    if (item.IdentityNumber == TxtIdentify.Text)
+                    {
+                        MessageBox.Show(" Bele Kimlik nomresi Qeyd edilibdir !", "Xəbərdarlıq", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                         return;
+                    }
+                }
+
+                //if ( _customerDal.GetByIdentifyNumber(TxtIdentify.Text))
+                //{
+                //    MessageBox.Show(" Bele Kimlik nomresi Qeyd edilibdir !", "Xəbərdarlıq", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //    return;
+                //}
 
                 if (_customerDal.GetAll().Any(m => m.Email == TxtEmail.Text))
                 {

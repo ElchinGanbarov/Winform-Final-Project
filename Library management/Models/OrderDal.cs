@@ -44,7 +44,7 @@ namespace Library_management.Models
         {
             using (LibraryDbContext _context = new LibraryDbContext())
             {
-                var result = _context.Orders.Include("Book").Include("Customer").Include("Manager").ToList();
+                var result = _context.Orders.Include("Books").Include("Customers").Include("Managers").OrderBy(p => p.Customers.Name).ToList();
                 return result;
             }
         }

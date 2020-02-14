@@ -85,6 +85,12 @@
     <Compile Include="Forms\BookReturnForm.Designer.cs">
       <DependentUpon>BookReturnForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\BookReturnsShowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BookReturnsShowForm.Designer.cs">
+      <DependentUpon>BookReturnsShowForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\CustomerCreatedForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +216,9 @@
     <EmbeddedResource Include="Forms\BookReturnForm.resx">
       <DependentUpon>BookReturnForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BookReturnsShowForm.resx">
+      <DependentUpon>BookReturnsShowForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\CustomerCreatedForm.resx">
       <DependentUpon>CustomerCreatedForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -302,6 +311,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\14850286-login-background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\books1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-customer-268x275-increase-customer-satisfaction-268.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img-Project-manager1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\library-final-compressed_wide-5707cc1f65ec3744f568677ba5f2a08ded734a6c-s800-c85.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unnamed.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

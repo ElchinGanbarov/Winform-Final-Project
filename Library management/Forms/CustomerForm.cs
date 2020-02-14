@@ -63,7 +63,7 @@ namespace Library_management.Forms
                 LblSelectedName.Show();
                 BtnDeleted.Show();
                 BtnUpdate.Show();
-                LblSelectedName.Text = _customer.Name;
+                LblSelectedName.Text = _customer.Name+" "+_customer.Surname;
             }
             catch { }
 

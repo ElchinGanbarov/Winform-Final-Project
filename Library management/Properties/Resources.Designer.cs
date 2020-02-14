@@ -73,9 +73,59 @@ namespace Library_management.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap books1 {
+            get {
+                object obj = ResourceManager.GetObject("books1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap img_Project_manager1 {
+            get {
+                object obj = ResourceManager.GetObject("img-Project-manager1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap library_100616524_large {
             get {
                 object obj = ResourceManager.GetObject("library-100616524-large", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap library_final_compressed_wide_5707cc1f65ec3744f568677ba5f2a08ded734a6c_s800_c85 {
+            get {
+                object obj = ResourceManager.GetObject("library-final-compressed_wide-5707cc1f65ec3744f568677ba5f2a08ded734a6c-s800-c85", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_customer_268x275_increase_customer_satisfaction_268 {
+            get {
+                object obj = ResourceManager.GetObject("png-customer-268x275-increase-customer-satisfaction-268", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap unnamed {
+            get {
+                object obj = ResourceManager.GetObject("unnamed", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

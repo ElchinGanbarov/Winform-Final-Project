@@ -191,7 +191,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(859, 313);
+            this.BackgroundImage = global::Library_management.Properties.Resources.unnamed;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(859, 342);
             this.Controls.Add(this.BtnOrderFinish);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.TxtLastMoney);

@@ -94,9 +94,10 @@
             // LblSelected
             // 
             this.LblSelected.AutoSize = true;
-            this.LblSelected.Location = new System.Drawing.Point(28, 32);
+            this.LblSelected.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblSelected.Location = new System.Drawing.Point(25, 32);
             this.LblSelected.Name = "LblSelected";
-            this.LblSelected.Size = new System.Drawing.Size(84, 13);
+            this.LblSelected.Size = new System.Drawing.Size(125, 16);
             this.LblSelected.TabIndex = 1;
             this.LblSelected.Text = "Secilmis musteri:";
             this.LblSelected.Visible = false;
@@ -104,17 +105,20 @@
             // LblSelectedName
             // 
             this.LblSelectedName.AutoSize = true;
-            this.LblSelectedName.Location = new System.Drawing.Point(119, 32);
+            this.LblSelectedName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblSelectedName.Location = new System.Drawing.Point(156, 32);
             this.LblSelectedName.Name = "LblSelectedName";
-            this.LblSelectedName.Size = new System.Drawing.Size(0, 13);
+            this.LblSelectedName.Size = new System.Drawing.Size(0, 16);
             this.LblSelectedName.TabIndex = 2;
             this.LblSelectedName.Visible = false;
             // 
             // BtnCreatCustomer
             // 
-            this.BtnCreatCustomer.Location = new System.Drawing.Point(492, 27);
+            this.BtnCreatCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCreatCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BtnCreatCustomer.Location = new System.Drawing.Point(492, 12);
             this.BtnCreatCustomer.Name = "BtnCreatCustomer";
-            this.BtnCreatCustomer.Size = new System.Drawing.Size(88, 23);
+            this.BtnCreatCustomer.Size = new System.Drawing.Size(88, 38);
             this.BtnCreatCustomer.TabIndex = 3;
             this.BtnCreatCustomer.Text = "Musteri yarat";
             this.BtnCreatCustomer.UseVisualStyleBackColor = true;
@@ -122,9 +126,9 @@
             // 
             // BtnUpdate
             // 
-            this.BtnUpdate.Location = new System.Drawing.Point(411, 27);
+            this.BtnUpdate.Location = new System.Drawing.Point(411, 12);
             this.BtnUpdate.Name = "BtnUpdate";
-            this.BtnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.BtnUpdate.Size = new System.Drawing.Size(75, 38);
             this.BtnUpdate.TabIndex = 4;
             this.BtnUpdate.Text = "Yenile";
             this.BtnUpdate.UseVisualStyleBackColor = true;
@@ -133,9 +137,9 @@
             // 
             // BtnDeleted
             // 
-            this.BtnDeleted.Location = new System.Drawing.Point(330, 27);
+            this.BtnDeleted.Location = new System.Drawing.Point(330, 12);
             this.BtnDeleted.Name = "BtnDeleted";
-            this.BtnDeleted.Size = new System.Drawing.Size(75, 23);
+            this.BtnDeleted.Size = new System.Drawing.Size(75, 38);
             this.BtnDeleted.TabIndex = 5;
             this.BtnDeleted.Text = "Sil";
             this.BtnDeleted.UseVisualStyleBackColor = true;
@@ -146,7 +150,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(699, 344);
+            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.BackgroundImage = global::Library_management.Properties.Resources.png_customer_268x275_increase_customer_satisfaction_268;
+            this.ClientSize = new System.Drawing.Size(638, 265);
             this.Controls.Add(this.BtnDeleted);
             this.Controls.Add(this.BtnUpdate);
             this.Controls.Add(this.BtnCreatCustomer);
@@ -154,8 +160,8 @@
             this.Controls.Add(this.LblSelected);
             this.Controls.Add(this.DgvCustomerShow);
             this.Name = "CustomerForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CustomerForm";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.DgvCustomerShow)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

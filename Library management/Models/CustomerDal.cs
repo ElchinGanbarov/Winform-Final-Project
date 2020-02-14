@@ -27,6 +27,14 @@ namespace Library_management.Models
                 
             }
         }
+        //public List<Customer> GetByIdentifyNumber()
+        //{
+        //    using (LibraryDbContext _context = new LibraryDbContext())
+        //    {
+        //        _context.Customers.;
+        //        return true;
+        //    }
+        //}
         public void Create(Customer customer)
         {
             using (LibraryDbContext _context = new LibraryDbContext())

@@ -61,5 +61,11 @@ namespace Library_management.Forms
 
         #endregion
 
+        private void ReturnsBooksShow_Click(object sender, EventArgs e)
+        {
+            BookReturnsShowForm bookReturnsShow = new BookReturnsShowForm();
+
+            bookReturnsShow.ShowDialog();
+        }
     }
 }

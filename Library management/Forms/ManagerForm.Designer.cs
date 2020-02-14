@@ -54,7 +54,7 @@
             this.Column4,
             this.Column5,
             this.Column6});
-            this.DgvManagerShow.Location = new System.Drawing.Point(12, 60);
+            this.DgvManagerShow.Location = new System.Drawing.Point(34, 57);
             this.DgvManagerShow.Name = "DgvManagerShow";
             this.DgvManagerShow.Size = new System.Drawing.Size(575, 150);
             this.DgvManagerShow.TabIndex = 0;
@@ -93,9 +93,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(488, 26);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(479, 23);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 28);
+            this.button1.Size = new System.Drawing.Size(130, 28);
             this.button1.TabIndex = 1;
             this.button1.Text = "Yeni Isci elave et";
             this.button1.UseVisualStyleBackColor = true;
@@ -104,9 +105,11 @@
             // LblSelected
             // 
             this.LblSelected.AutoSize = true;
-            this.LblSelected.Location = new System.Drawing.Point(12, 41);
+            this.LblSelected.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblSelected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.LblSelected.Location = new System.Drawing.Point(31, 35);
             this.LblSelected.Name = "LblSelected";
-            this.LblSelected.Size = new System.Drawing.Size(66, 13);
+            this.LblSelected.Size = new System.Drawing.Size(99, 16);
             this.LblSelected.TabIndex = 2;
             this.LblSelected.Text = "Secilmis isci:";
             this.LblSelected.Visible = false;
@@ -114,15 +117,18 @@
             // LblSelectedName
             // 
             this.LblSelectedName.AutoSize = true;
-            this.LblSelectedName.Location = new System.Drawing.Point(84, 41);
+            this.LblSelectedName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblSelectedName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.LblSelectedName.Location = new System.Drawing.Point(136, 35);
             this.LblSelectedName.Name = "LblSelectedName";
-            this.LblSelectedName.Size = new System.Drawing.Size(0, 13);
+            this.LblSelectedName.Size = new System.Drawing.Size(0, 16);
             this.LblSelectedName.TabIndex = 3;
             this.LblSelectedName.Visible = false;
             // 
             // BtnUpdate
             // 
-            this.BtnUpdate.Location = new System.Drawing.Point(407, 26);
+            this.BtnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnUpdate.Location = new System.Drawing.Point(398, 23);
             this.BtnUpdate.Name = "BtnUpdate";
             this.BtnUpdate.Size = new System.Drawing.Size(75, 28);
             this.BtnUpdate.TabIndex = 4;
@@ -133,7 +139,8 @@
             // 
             // BtnDelete
             // 
-            this.BtnDelete.Location = new System.Drawing.Point(326, 26);
+            this.BtnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnDelete.Location = new System.Drawing.Point(317, 23);
             this.BtnDelete.Name = "BtnDelete";
             this.BtnDelete.Size = new System.Drawing.Size(75, 28);
             this.BtnDelete.TabIndex = 5;
@@ -146,7 +153,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(735, 358);
+            this.BackgroundImage = global::Library_management.Properties.Resources.img_Project_manager1;
+            this.ClientSize = new System.Drawing.Size(770, 351);
             this.Controls.Add(this.BtnDelete);
             this.Controls.Add(this.BtnUpdate);
             this.Controls.Add(this.LblSelectedName);

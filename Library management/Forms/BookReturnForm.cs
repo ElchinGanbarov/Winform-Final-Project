@@ -61,7 +61,7 @@ namespace Library_management.Forms
 
                 if (diffdays > 0)
                 {
-                    lastmoney = ((bookprice / 2) / 100) * diffdays * _bookCount;
+                    lastmoney = ((bookprice / 2) ) * diffdays * _bookCount;
                     _order.LastMoney = lastmoney;
                 }
                 else
@@ -114,7 +114,7 @@ namespace Library_management.Forms
 
             if (diffdays>0)
             {
-                lastmoney = bookprice * _bookCount + (((bookprice / 2) / 100) * diffdays);
+                lastmoney = bookprice * _bookCount + (((bookprice / 2)) * diffdays);
                 _order.LastMoney = lastmoney;
             }
             else if (diffdays < 0)
