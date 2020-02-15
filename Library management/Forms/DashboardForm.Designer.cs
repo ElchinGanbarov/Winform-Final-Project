@@ -86,6 +86,7 @@
             this.BtnReports.TabIndex = 4;
             this.BtnReports.Text = "Hesabatlar";
             this.BtnReports.UseVisualStyleBackColor = false;
+            this.BtnReports.Click += new System.EventHandler(this.BtnReports_Click);
             // 
             // button1
             // 

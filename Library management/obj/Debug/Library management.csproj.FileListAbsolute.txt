@@ -74,3 +74,4 @@ C:\Users\Admin\Desktop\Winform-Final-Project\Library management\obj\Debug\Librar
 C:\Users\Admin\Desktop\Winform-Final-Project\Library management\obj\Debug\Library_management.Forms.BookReturnForm.resources
 C:\Users\Admin\Desktop\Winform-Final-Project\Library management\obj\Debug\Library_management.Migrations.ordersdate.resources
 C:\Users\Admin\Desktop\Winform-Final-Project\Library management\obj\Debug\Library_management.Forms.BookReturnsShowForm.resources
+C:\Users\Admin\Desktop\Winform-Final-Project\Library management\obj\Debug\Library_management.Forms.ReportForm.resources

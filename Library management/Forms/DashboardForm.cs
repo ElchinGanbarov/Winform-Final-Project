@@ -67,5 +67,12 @@ namespace Library_management.Forms
 
             bookReturnsShow.ShowDialog();
         }
+
+        private void BtnReports_Click(object sender, EventArgs e)
+        {
+            ReportForm reportForm = new ReportForm();
+
+            reportForm.ShowDialog();
+        }
     }
 }
