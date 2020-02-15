@@ -72,11 +72,18 @@ namespace Library_management.Forms
         //Customer Deleted Database//
         private void BtnDeleted_Click(object sender, EventArgs e)
         {
-            DialogResult r = MessageBox.Show("Əminsinizmi.?", "Silməyə", MessageBoxButtons.YesNo);
-            if (r == DialogResult.Yes)
+            try
             {
-                _customerDal.Delete(_customer);
-                Reset();
+                DialogResult r = MessageBox.Show("Əminsinizmi.?", "Silməyə", MessageBoxButtons.YesNo);
+                if (r == DialogResult.Yes)
+                {
+                    _customerDal.Delete(_customer);
+                    Reset();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Bazada Bele Bir Data Movcuddur");
             }
            
         }

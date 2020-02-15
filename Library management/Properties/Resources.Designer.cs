@@ -73,6 +73,16 @@ namespace Library_management.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _162410 {
+            get {
+                object obj = ResourceManager.GetObject("162410", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap books1 {
             get {
                 object obj = ResourceManager.GetObject("books1", resourceCulture);
@@ -116,6 +126,26 @@ namespace Library_management.Properties {
         internal static System.Drawing.Bitmap png_customer_268x275_increase_customer_satisfaction_268 {
             get {
                 object obj = ResourceManager.GetObject("png-customer-268x275-increase-customer-satisfaction-268", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap registration_login_keyboard_man {
+            get {
+                object obj = ResourceManager.GetObject("registration-login-keyboard-man", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap report {
+            get {
+                object obj = ResourceManager.GetObject("report", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

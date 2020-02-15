@@ -58,11 +58,18 @@ namespace Library_management.Forms
         //Book Deleted//
         private void BtnDelete_Click(object sender, EventArgs e)
         {
-            DialogResult r = MessageBox.Show("Əminsinizmi.?", "Silməyə", MessageBoxButtons.YesNo);
-            if (r == DialogResult.Yes)
+            try
             {
-                _bookDal.Delete(_book);
-                Reset();
+                DialogResult r = MessageBox.Show("Əminsinizmi.?", "Silməyə", MessageBoxButtons.YesNo);
+                if (r == DialogResult.Yes)
+                {
+                    _bookDal.Delete(_book);
+                    Reset();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Bazada Bele bir Data Movcuddur");
             }
         }
 

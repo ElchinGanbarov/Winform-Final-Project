@@ -15,27 +15,14 @@ namespace Library_management.Forms
     {
         private OrderDal _orderDal;
         private Orders orders;
+        private int buttonCondition;
         public BookReturnsShowForm()
         {
             _orderDal = new OrderDal();
             InitializeComponent();
         }
-
-        private void BtnTodayReturn_Click(object sender, EventArgs e)
-        {
-            List<Orders> orders = _orderDal.GetAll();
-            DgvShowReturnBook.Rows.Clear();
-            foreach (Orders item in orders)
-            {
-                if (item.DeadLine.Value == DateTime.Now.Date && item.Status==false)
-                {
-                    DgvShowReturnBook.Rows.Add(item.Id, item.Customers.Name,item.Customers.Phone,item.Books.Name, item.BookCount, item.DeadLine,item.Customers.IdentityNumber);
-                }
-            }
-            labeldefalt.Show();
-            TxtBookCount.Show();
-        }
-
+        
+        //Text Change Find Order//
         private void TextBox2_TextChanged(object sender, EventArgs e)
         {
             try
@@ -45,20 +32,50 @@ namespace Library_management.Forms
                 DgvShowReturnBook.Rows.Clear();
                 foreach (Orders item in orders)
                 {
-                    if (item.DeadLine.Value == DateTime.Now.Date && item.Status == false)
+                  
+                    if (item.DeadLine.Value == DateTime.Now.Date && item.Status == false && buttonCondition==0)
                     {
                         DgvShowReturnBook.Rows.Add(item.Id, item.Customers.Name, item.Customers.Phone, item.Books.Name, item.BookCount, item.DeadLine, item.Customers.IdentityNumber);
                     }
+                   else if (item.DeadLine.Value == DateTime.Now.Date.AddDays(1) && item.Status == false && buttonCondition == 1)
+                    {
+                        DgvShowReturnBook.Rows.Add(item.Id, item.Customers.Name, item.Customers.Phone, item.Books.Name, item.BookCount, item.DeadLine, item.Customers.IdentityNumber);
+                    }
+                   else if (item.DeadLine.Value.Date < DateTime.Now.Date && item.Status == false && buttonCondition == 2)
+                    {
+                        DgvShowReturnBook.Rows.Add(item.Id, item.Customers.Name, item.Customers.Phone, item.Books.Name, item.BookCount, item.DeadLine, item.Customers.IdentityNumber);
+                    }
+
                 };
+               
+
                 int a = (int)DgvShowReturnBook.CurrentRow.Cells[4].Value;
             }
             catch { }
             
             
         }
+        //Today Return Order//
+        private void BtnTodayReturn_Click(object sender, EventArgs e)
+        {
+            buttonCondition = 0;
+            List<Orders> orders = _orderDal.GetAll();
+            DgvShowReturnBook.Rows.Clear();
+            foreach (Orders item in orders)
+            {
+                if (item.DeadLine.Value == DateTime.Now.Date && item.Status == false)
+                {
+                    DgvShowReturnBook.Rows.Add(item.Id, item.Customers.Name, item.Customers.Phone, item.Books.Name, item.BookCount, item.DeadLine, item.Customers.IdentityNumber);
+                }
 
+            }
+            labeldefalt.Show();
+            TxtBookCount.Show();
+        }
+        //Tommorrow Return Order//
         private void BtnTomorrowReturn_Click(object sender, EventArgs e)
         {
+            buttonCondition = 1;
             List<Orders> orders = _orderDal.GetAll();
             DgvShowReturnBook.Rows.Clear();
             foreach (Orders item in orders)
@@ -72,9 +89,10 @@ namespace Library_management.Forms
             labeldefalt.Hide();
             TxtBookCount.Hide();
         }
-
+        //Late Return Order//
         private void BtnLast_Click(object sender, EventArgs e)
         {
+            buttonCondition = 2;
             List<Orders> orders = _orderDal.GetAll();
             DgvShowReturnBook.Rows.Clear();
             foreach (Orders item in orders)
@@ -89,6 +107,7 @@ namespace Library_management.Forms
             TxtBookCount.Hide();
         }
         int a;
+        //DataGriedView Add  Return Order//
         private void DgvShowReturnBook_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try

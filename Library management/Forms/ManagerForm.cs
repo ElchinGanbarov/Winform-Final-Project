@@ -47,11 +47,18 @@ namespace Library_management.Forms
         //Manager Delete Event//
         private void BtnDelete_Click(object sender, EventArgs e)
         {
-            DialogResult r = MessageBox.Show("Əminsinizmi.?", "Silməyə", MessageBoxButtons.YesNo);
-            if (r == DialogResult.Yes)
+            try
             {
-                _managerDal.Delete(_manager);
-                Reset();
+                DialogResult r = MessageBox.Show("Əminsinizmi.?", "Silməyə", MessageBoxButtons.YesNo);
+                if (r == DialogResult.Yes)
+                {
+                    _managerDal.Delete(_manager);
+                    Reset();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Bazada Bele bir Data Movcuddur");
             }
         }
 

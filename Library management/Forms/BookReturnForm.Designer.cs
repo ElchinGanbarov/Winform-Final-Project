@@ -142,6 +142,7 @@
             // DtpReturnValue
             // 
             this.DtpReturnValue.Location = new System.Drawing.Point(471, 15);
+            this.DtpReturnValue.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
             this.DtpReturnValue.Name = "DtpReturnValue";
             this.DtpReturnValue.Size = new System.Drawing.Size(200, 20);
             this.DtpReturnValue.TabIndex = 3;
@@ -191,7 +192,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Library_management.Properties.Resources.unnamed;
+            this.BackgroundImage = global::Library_management.Properties.Resources._162410;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(859, 342);
             this.Controls.Add(this.BtnOrderFinish);

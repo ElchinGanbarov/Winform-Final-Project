@@ -34,7 +34,6 @@
             this.DgvStartTime = new System.Windows.Forms.DateTimePicker();
             this.DgvEndTime = new System.Windows.Forms.DateTimePicker();
             this.dgwReportOrder = new System.Windows.Forms.DataGridView();
-            this.BtnExcelExport = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,6 +42,7 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BtnExcelExport = new System.Windows.Forms.Button();
             this.LblCount = new System.Windows.Forms.Label();
             this.LblReturnCount = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgwReportOrder)).BeginInit();
@@ -82,16 +82,20 @@
             // DgvStartTime
             // 
             this.DgvStartTime.Location = new System.Drawing.Point(133, 9);
+            this.DgvStartTime.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
             this.DgvStartTime.Name = "DgvStartTime";
             this.DgvStartTime.Size = new System.Drawing.Size(126, 20);
             this.DgvStartTime.TabIndex = 4;
+            this.DgvStartTime.ValueChanged += new System.EventHandler(this.DgvStartTime_ValueChanged);
             // 
             // DgvEndTime
             // 
             this.DgvEndTime.Location = new System.Drawing.Point(133, 38);
+            this.DgvEndTime.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
             this.DgvEndTime.Name = "DgvEndTime";
             this.DgvEndTime.Size = new System.Drawing.Size(126, 20);
             this.DgvEndTime.TabIndex = 5;
+            this.DgvEndTime.ValueChanged += new System.EventHandler(this.DgvEndTime_ValueChanged);
             // 
             // dgwReportOrder
             // 
@@ -110,18 +114,6 @@
             this.dgwReportOrder.Name = "dgwReportOrder";
             this.dgwReportOrder.Size = new System.Drawing.Size(864, 201);
             this.dgwReportOrder.TabIndex = 6;
-            // 
-            // BtnExcelExport
-            // 
-            this.BtnExcelExport.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnExcelExport.Location = new System.Drawing.Point(154, 67);
-            this.BtnExcelExport.Name = "BtnExcelExport";
-            this.BtnExcelExport.Size = new System.Drawing.Size(92, 43);
-            this.BtnExcelExport.TabIndex = 7;
-            this.BtnExcelExport.Text = "Excele export et";
-            this.BtnExcelExport.UseVisualStyleBackColor = true;
-            this.BtnExcelExport.Visible = false;
-            this.BtnExcelExport.Click += new System.EventHandler(this.BtnExcelExport_Click);
             // 
             // Column1
             // 
@@ -164,6 +156,18 @@
             this.Column7.HeaderText = "Son tarix:";
             this.Column7.Name = "Column7";
             // 
+            // BtnExcelExport
+            // 
+            this.BtnExcelExport.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnExcelExport.Location = new System.Drawing.Point(154, 67);
+            this.BtnExcelExport.Name = "BtnExcelExport";
+            this.BtnExcelExport.Size = new System.Drawing.Size(92, 43);
+            this.BtnExcelExport.TabIndex = 7;
+            this.BtnExcelExport.Text = "Excele export et";
+            this.BtnExcelExport.UseVisualStyleBackColor = true;
+            this.BtnExcelExport.Visible = false;
+            this.BtnExcelExport.Click += new System.EventHandler(this.BtnExcelExport_Click);
+            // 
             // LblCount
             // 
             this.LblCount.AutoSize = true;
@@ -187,7 +191,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(951, 380);
+            this.BackgroundImage = global::Library_management.Properties.Resources.report;
+            this.ClientSize = new System.Drawing.Size(1147, 438);
             this.Controls.Add(this.LblReturnCount);
             this.Controls.Add(this.LblCount);
             this.Controls.Add(this.BtnExcelExport);
@@ -198,6 +203,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Name = "ReportForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReportForm";
             ((System.ComponentModel.ISupportInitialize)(this.dgwReportOrder)).EndInit();
             this.ResumeLayout(false);

@@ -40,7 +40,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(28, 38);
+            this.label1.Location = new System.Drawing.Point(77, 60);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 16);
             this.label1.TabIndex = 0;
@@ -48,7 +48,7 @@
             // 
             // TxtEmail
             // 
-            this.TxtEmail.Location = new System.Drawing.Point(28, 58);
+            this.TxtEmail.Location = new System.Drawing.Point(77, 80);
             this.TxtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.ShortcutsEnabled = false;
@@ -60,7 +60,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(28, 90);
+            this.label2.Location = new System.Drawing.Point(77, 112);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 16);
             this.label2.TabIndex = 2;
@@ -68,7 +68,7 @@
             // 
             // TxtPassword
             // 
-            this.TxtPassword.Location = new System.Drawing.Point(28, 111);
+            this.TxtPassword.Location = new System.Drawing.Point(77, 133);
             this.TxtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TxtPassword.Name = "TxtPassword";
             this.TxtPassword.Size = new System.Drawing.Size(151, 20);
@@ -79,7 +79,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(28, 143);
+            this.button1.Location = new System.Drawing.Point(77, 165);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(151, 31);
@@ -92,8 +92,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Library_management.Properties.Resources._14850286_login_background;
-            this.ClientSize = new System.Drawing.Size(211, 229);
+            this.BackgroundImage = global::Library_management.Properties.Resources.registration_login_keyboard_man;
+            this.ClientSize = new System.Drawing.Size(310, 297);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TxtPassword);

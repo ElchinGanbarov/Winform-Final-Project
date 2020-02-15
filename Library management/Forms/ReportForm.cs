@@ -17,12 +17,14 @@ namespace Library_management.Forms
     {
         private OrderDal _orderDal;
         private List<Orders> orders;
+        private  decimal a;
         public ReportForm()
         {
             _orderDal = new OrderDal();
             InitializeComponent();
         }
 
+        //Show the Report return book//
         private void Button1_Click(object sender, EventArgs e)
         {
             DateTime endtime = DgvEndTime.Value.Date;
@@ -36,11 +38,16 @@ namespace Library_management.Forms
                 {
                     
                     dgwReportOrder.Rows.Add(item.Id, item.Books.Name, item.BookCount, item.LastMoney, item.Customers.Name, item.Customers.IdentityNumber, item.Managers.Name, item.ReturnTime);
+                    a += Convert.ToDecimal(item.LastMoney);
+                   
                 }
             }
+            LblReturnCount.Text = a.ToString();
             BtnExcelExport.Show();
+
         }
 
+        //Excel Export//
         private void BtnExcelExport_Click(object sender, EventArgs e)
         {
             if (dgwReportOrder.Rows.Count > 0)
@@ -62,6 +69,16 @@ namespace Library_management.Forms
                 }
                 workbook.SaveAs(@"C:\Users\Admin\Desktop\Excel.xlsx");
             }
+        }
+        //End Time DatePicker Value Change//
+        private void DgvEndTime_ValueChanged(object sender, EventArgs e)
+        {
+            a = 0;
+        }
+        //Start Time DatePicker Value Change//
+        private void DgvStartTime_ValueChanged(object sender, EventArgs e)
+        {
+            a = 0;
         }
     }
 }
