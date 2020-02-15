@@ -8,12 +8,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClosedXML.Excel;
+using System.IO;
 
 namespace Library_management.Forms
 {
     public partial class ReportForm : Form
     {
         private OrderDal _orderDal;
+        private List<Orders> orders;
         public ReportForm()
         {
             _orderDal = new OrderDal();
@@ -24,7 +27,7 @@ namespace Library_management.Forms
         {
             DateTime endtime = DgvEndTime.Value.Date;
             DateTime starttime = DgvStartTime.Value.Date;
-            List<Orders> orders = _orderDal.GetAll();
+            orders = _orderDal.GetAll();
             dgwReportOrder.Rows.Clear();
             foreach(Orders item in orders)
             {
@@ -32,8 +35,32 @@ namespace Library_management.Forms
                 if (item.Status == true && starttime < item.ReturnTime.Value && item.ReturnTime.Value < endtime )
                 {
                     
-                    dgwReportOrder.Rows.Add(item.Id, item.Books.Name, item.BookCount, item.Books.Price, item.Customers.Name, item.Customers.IdentityNumber, item.Managers.Name, item.ReturnTime);
+                    dgwReportOrder.Rows.Add(item.Id, item.Books.Name, item.BookCount, item.LastMoney, item.Customers.Name, item.Customers.IdentityNumber, item.Managers.Name, item.ReturnTime);
                 }
+            }
+            BtnExcelExport.Show();
+        }
+
+        private void BtnExcelExport_Click(object sender, EventArgs e)
+        {
+            if (dgwReportOrder.Rows.Count > 0)
+            {
+                var workbook = new XLWorkbook();
+                var worksheet = workbook.Worksheets.Add("Sample Sheet");
+                for (int i = 1; i < dgwReportOrder.Columns.Count; i++)
+                {
+                    worksheet.Cell(1, i).SetValue(dgwReportOrder.Columns[i].HeaderText);
+
+                }
+                for (int i = 0; i < dgwReportOrder.Rows.Count-1; i++)
+                {
+                    for (int j = 1; j < dgwReportOrder.Columns.Count; j++)
+                    {
+                        worksheet.Cell(i + 2, j ).SetValue(dgwReportOrder.Rows[i].Cells[j].Value.ToString());
+
+                    }
+                }
+                workbook.SaveAs(@"C:\Users\Admin\Desktop\Excel.xlsx");
             }
         }
     }
