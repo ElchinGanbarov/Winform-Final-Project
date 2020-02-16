@@ -10,7 +10,7 @@ namespace Library_management.Models
 {
     public class OrderDal : IRepository<Orders>
     {
-
+        //Choose Order Select Id//
         public Orders GetById(int id)
         {
             using (LibraryDbContext _context = new LibraryDbContext())
@@ -20,6 +20,7 @@ namespace Library_management.Models
 
             }
         }
+        //Order Create Databse//
         public void Create(Orders orders)
         {
             using (LibraryDbContext _context = new LibraryDbContext())
@@ -29,7 +30,7 @@ namespace Library_management.Models
                 _context.SaveChanges();
             }
         }
-
+        //Order Deleted Databse//
         public void Delete(Orders orders)
         {
             using (LibraryDbContext _context = new LibraryDbContext())
@@ -39,7 +40,7 @@ namespace Library_management.Models
                 _context.SaveChanges();
             }
         }
-
+        //Order Listed//
         public List<Orders> GetAll()
         {
             using (LibraryDbContext _context = new LibraryDbContext())
@@ -48,7 +49,7 @@ namespace Library_management.Models
                 return result;
             }
         }
-
+        //Push Order Basket//
         public List<Orders> GetForBasket(int id)
         {
             using (LibraryDbContext _context = new LibraryDbContext())
@@ -57,7 +58,7 @@ namespace Library_management.Models
                 return result;
             }
         }
-
+        //All Orders Listed//
         public List<Orders> GetForAllReturnOrders()
         {
             using (LibraryDbContext _context = new LibraryDbContext())
@@ -66,6 +67,7 @@ namespace Library_management.Models
                 return result;
             }
         }
+        //Choose Order Select Customer Identify//
         public List<Orders> GetByIdentify(string id)
         {
             using (LibraryDbContext _context = new LibraryDbContext())
@@ -74,8 +76,7 @@ namespace Library_management.Models
 
             }
         }
-
-
+        //Orders Update Database//
         public void Update(Orders orders)
         {
             using (LibraryDbContext _context = new LibraryDbContext())

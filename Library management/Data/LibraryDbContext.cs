@@ -10,6 +10,7 @@ namespace Library_management.Data
 {
   public class LibraryDbContext:DbContext
     {
+        //ConnectionString Name =>LibraryDbContext//
         public LibraryDbContext() : base("LibraryDbContext")
         {
 

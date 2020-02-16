@@ -10,6 +10,7 @@ namespace Library_management.Models
 {
   public  class ManagerDal : IRepository<Manager>
     {
+        //Choose Manager Select Id//
         public Manager GetById(int id)
         {
             using (LibraryDbContext _context = new LibraryDbContext())
@@ -19,6 +20,7 @@ namespace Library_management.Models
 
             }
         }
+        //Manager Create Databse//
         public void Create(Manager manager)
         {
             using (LibraryDbContext _context = new LibraryDbContext())
@@ -28,7 +30,7 @@ namespace Library_management.Models
                 _context.SaveChanges();
             }
         }
-
+        //Manager Delete Database//
         public void Delete(Manager manager)
         {
             using (LibraryDbContext _context = new LibraryDbContext())
@@ -38,7 +40,7 @@ namespace Library_management.Models
                 _context.SaveChanges();
             }
         }
-
+        //Manager Listed//
         public List<Manager> GetAll()
         {
             using (LibraryDbContext _context = new LibraryDbContext())
@@ -46,7 +48,7 @@ namespace Library_management.Models
                 return _context.Managers.ToList();
             }
         }
-
+        //Manager Update Database//
         public void Update(Manager manager)
         {
             using (LibraryDbContext _context = new LibraryDbContext())

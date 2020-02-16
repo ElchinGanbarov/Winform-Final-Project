@@ -58,7 +58,7 @@
             this.DgvManagerShow.Name = "DgvManagerShow";
             this.DgvManagerShow.Size = new System.Drawing.Size(575, 150);
             this.DgvManagerShow.TabIndex = 0;
-            this.DgvManagerShow.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvManagerShow_RowHeaderMouseClick);
+            this.DgvManagerShow.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvManagerShow_CellClick);
             // 
             // Column1
             // 

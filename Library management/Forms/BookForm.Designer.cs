@@ -57,7 +57,7 @@
             this.DgvAddBooks.Name = "DgvAddBooks";
             this.DgvAddBooks.Size = new System.Drawing.Size(675, 170);
             this.DgvAddBooks.TabIndex = 0;
-            this.DgvAddBooks.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DataGridView1_RowHeaderMouseClick);
+            this.DgvAddBooks.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvAddBooks_CellClick);
             // 
             // Column1
             // 

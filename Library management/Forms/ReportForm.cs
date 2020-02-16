@@ -50,24 +50,33 @@ namespace Library_management.Forms
         //Excel Export//
         private void BtnExcelExport_Click(object sender, EventArgs e)
         {
-            if (dgwReportOrder.Rows.Count > 0)
+            try
             {
-                var workbook = new XLWorkbook();
-                var worksheet = workbook.Worksheets.Add("Sample Sheet");
-                for (int i = 1; i < dgwReportOrder.Columns.Count; i++)
+                if (dgwReportOrder.Rows.Count > 0)
                 {
-                    worksheet.Cell(1, i).SetValue(dgwReportOrder.Columns[i].HeaderText);
-
-                }
-                for (int i = 0; i < dgwReportOrder.Rows.Count-1; i++)
-                {
-                    for (int j = 1; j < dgwReportOrder.Columns.Count; j++)
+                    var workbook = new XLWorkbook();
+                    var worksheet = workbook.Worksheets.Add("Sample Sheet");
+                    for (int i = 1; i < dgwReportOrder.Columns.Count; i++)
                     {
-                        worksheet.Cell(i + 2, j ).SetValue(dgwReportOrder.Rows[i].Cells[j].Value.ToString());
+                        worksheet.Cell(1, i).SetValue(dgwReportOrder.Columns[i].HeaderText);
+                        worksheet.Column(i).Width = 20;
 
                     }
+                    for (int i = 0; i < dgwReportOrder.Rows.Count - 1; i++)
+                    {
+                        for (int j = 1; j < dgwReportOrder.Columns.Count; j++)
+                        {
+                            worksheet.Cell(i + 2, j).SetValue(dgwReportOrder.Rows[i].Cells[j].Value.ToString());
+
+                        }
+                    }
+                    workbook.SaveAs(@"C:\Users\Admin\Desktop\Excel.xlsx");
+                    MessageBox.Show("Cedvel Excele Export edildi");
                 }
-                workbook.SaveAs(@"C:\Users\Admin\Desktop\Excel.xlsx");
+            }
+            catch
+            {
+                MessageBox.Show("Zehmet olmasa fayili baglayin");
             }
         }
         //End Time DatePicker Value Change//

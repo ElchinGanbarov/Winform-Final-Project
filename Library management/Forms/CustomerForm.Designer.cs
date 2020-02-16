@@ -58,7 +58,7 @@
             this.DgvCustomerShow.Name = "DgvCustomerShow";
             this.DgvCustomerShow.Size = new System.Drawing.Size(552, 150);
             this.DgvCustomerShow.TabIndex = 0;
-            this.DgvCustomerShow.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvCustomerShow_RowHeaderMouseClick);
+            this.DgvCustomerShow.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvCustomerShow_CellClick);
             // 
             // Column1
             // 

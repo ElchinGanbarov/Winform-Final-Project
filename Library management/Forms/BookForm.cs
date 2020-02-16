@@ -82,20 +82,7 @@ namespace Library_management.Forms
         }
 
         #endregion
-        //DataGridView Row Header//
-        private void DataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            try
-            {
-                id = (int)DgvAddBooks.Rows[e.RowIndex].Cells[0].Value;
-                _book = _bookDal.GetById(id);
-                SelectedLabel.Show();
-                BtnDelete.Show();
-                BtnUpdate.Show();
-                SelectedName.Text = _book.Name;
-            }
-            catch { }
-        }
+        
 
          //Choose Book Reset//     
         private void Reset()
@@ -112,6 +99,20 @@ namespace Library_management.Forms
             GenreForm genre = new GenreForm();
 
             genre.ShowDialog();
+        }
+        //DataGridView Cell Click//
+        private void DgvAddBooks_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                id = (int)DgvAddBooks.Rows[e.RowIndex].Cells[0].Value;
+                _book = _bookDal.GetById(id);
+                SelectedLabel.Show();
+                BtnDelete.Show();
+                BtnUpdate.Show();
+                SelectedName.Text = _book.Name;
+            }
+            catch { }
         }
     }
 }

@@ -52,23 +52,6 @@ namespace Library_management.Forms
             customerCreatedForm.ShowDialog();
         }
 
-        //Choose Customer//
-        private void DgvCustomerShow_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            try
-            {
-                id = (int)DgvCustomerShow.Rows[e.RowIndex].Cells[0].Value;
-                _customer = _customerDal.GetById(id);
-                LblSelected.Show();
-                LblSelectedName.Show();
-                BtnDeleted.Show();
-                BtnUpdate.Show();
-                LblSelectedName.Text = _customer.Name+" "+_customer.Surname;
-            }
-            catch { }
-
-        }
-
         //Customer Deleted Database//
         private void BtnDeleted_Click(object sender, EventArgs e)
         {
@@ -95,7 +78,6 @@ namespace Library_management.Forms
             customerUpdate.ShowDialog();
         }
 
-      
         #endregion
 
         //Choose Customer ResetMethods//
@@ -109,7 +91,20 @@ namespace Library_management.Forms
             FillDataCustomer();
 
         }
-
-       
+        //Choose Customer Cell Click//
+        private void DgvCustomerShow_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                id = (int)DgvCustomerShow.Rows[e.RowIndex].Cells[0].Value;
+                _customer = _customerDal.GetById(id);
+                LblSelected.Show();
+                LblSelectedName.Show();
+                BtnDeleted.Show();
+                BtnUpdate.Show();
+                LblSelectedName.Text = _customer.Name + " " + _customer.Surname;
+            }
+            catch { }
+        }
     }
 }

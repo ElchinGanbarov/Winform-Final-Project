@@ -10,6 +10,7 @@ namespace Library_management.Models
 {
   public  class BookDal : IRepository<Book>
     {
+        //Choose Book Select Id//
         public Book GetById(int id)
         {
             using (LibraryDbContext _context = new LibraryDbContext())
@@ -19,7 +20,7 @@ namespace Library_management.Models
                
             }
         }
-
+        //Search Book Filter//
         public List<Book> FilterByName(string name)
         {
             using (LibraryDbContext _context = new LibraryDbContext())
@@ -29,6 +30,7 @@ namespace Library_management.Models
 
             }
         }
+        //Book Create Database//
         public void Create(Book entity)
         {
             using (LibraryDbContext _context=new LibraryDbContext())
@@ -37,7 +39,7 @@ namespace Library_management.Models
                 _context.SaveChanges();
             }
         }
-
+        //Book Delete Database//
         public void Delete(Book book)
         {
             using (LibraryDbContext _context = new LibraryDbContext())
@@ -47,7 +49,7 @@ namespace Library_management.Models
                    _context.SaveChanges();
             }
         }
-
+        //Book Listed//
         public List<Book> GetAll()
         {
             using (LibraryDbContext _context = new LibraryDbContext())
@@ -55,7 +57,7 @@ namespace Library_management.Models
                 return _context.Books.Include("Genre").ToList();
             }
         }
-
+        //Book Update Database//
         public void Update(Book book)
         {
             using (LibraryDbContext _context = new LibraryDbContext())

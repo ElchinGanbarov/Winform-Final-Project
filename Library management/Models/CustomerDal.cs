@@ -10,6 +10,7 @@ namespace Library_management.Models
 {
   public  class CustomerDal : IRepository<Customer>
     {
+        //Choose Customer Select Id//
         public Customer GetById(int id)
         {
             using (LibraryDbContext _context = new LibraryDbContext())
@@ -19,6 +20,7 @@ namespace Library_management.Models
 
             }
         }
+        //Choose Customer Select Identify Number//
         public List<Customer> GetByIdentify(string id)
         {
             using (LibraryDbContext _context = new LibraryDbContext())
@@ -27,14 +29,7 @@ namespace Library_management.Models
                 
             }
         }
-        //public List<Customer> GetByIdentifyNumber()
-        //{
-        //    using (LibraryDbContext _context = new LibraryDbContext())
-        //    {
-        //        _context.Customers.;
-        //        return true;
-        //    }
-        //}
+        //Create Customer Database//
         public void Create(Customer customer)
         {
             using (LibraryDbContext _context = new LibraryDbContext())
@@ -44,7 +39,7 @@ namespace Library_management.Models
                 _context.SaveChanges();
             }
         }
-
+        //Delete Customer Databse//
         public void Delete(Customer customer)
         {
             using (LibraryDbContext _context = new LibraryDbContext())
@@ -54,7 +49,7 @@ namespace Library_management.Models
                 _context.SaveChanges();
             }
         }
-
+        //Customer Listed//
         public List<Customer> GetAll()
         {
             using (LibraryDbContext _context = new LibraryDbContext())
@@ -62,7 +57,7 @@ namespace Library_management.Models
                 return _context.Customers.ToList();
             }
         }
-
+        //Customer Update Database//
         public void Update(Customer customer)
         {
             using (LibraryDbContext _context = new LibraryDbContext())

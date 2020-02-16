@@ -76,8 +76,17 @@ namespace Library_management.Forms
         {
             FillDataManager();
         }
-        //ManagerForm-DataGridView-RowHeaderMouseClick Choose Id//
-        private void DgvManagerShow_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        //Coohe Manager Reset//
+        private void Reset()
+        {
+            _manager = null;
+            LblSelectedName.Text = " ";
+            BtnDelete.Show();
+            BtnUpdate.Show();
+            FillDataManager();
+        }
+        //ManagerForm-DataGridView-Cell Click Choose Id//
+        private void DgvManagerShow_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
@@ -87,18 +96,9 @@ namespace Library_management.Forms
                 LblSelectedName.Show();
                 BtnDelete.Show();
                 BtnUpdate.Show();
-                LblSelectedName.Text = _manager.Name+" "+_manager.Surname;
+                LblSelectedName.Text = _manager.Name + " " + _manager.Surname;
             }
             catch { }
-        }
-        //Coohe Manager Reset//
-        private void Reset()
-        {
-            _manager = null;
-            LblSelectedName.Text = " ";
-            BtnDelete.Show();
-            BtnUpdate.Show();
-            FillDataManager();
         }
     }
 }
