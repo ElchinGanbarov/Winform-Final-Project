@@ -49,5 +49,12 @@ namespace Library_management.Forms
             }
 
         }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            ManagerCreatedForm manager = new ManagerCreatedForm();
+
+            manager.ShowDialog();
+        }
     }
 }
