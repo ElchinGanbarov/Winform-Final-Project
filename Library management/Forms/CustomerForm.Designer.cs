@@ -115,7 +115,7 @@
             // BtnCreatCustomer
             // 
             this.BtnCreatCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCreatCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BtnCreatCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BtnCreatCustomer.Location = new System.Drawing.Point(492, 12);
             this.BtnCreatCustomer.Name = "BtnCreatCustomer";
             this.BtnCreatCustomer.Size = new System.Drawing.Size(88, 38);
@@ -126,6 +126,7 @@
             // 
             // BtnUpdate
             // 
+            this.BtnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnUpdate.Location = new System.Drawing.Point(411, 12);
             this.BtnUpdate.Name = "BtnUpdate";
             this.BtnUpdate.Size = new System.Drawing.Size(75, 38);
@@ -137,6 +138,7 @@
             // 
             // BtnDeleted
             // 
+            this.BtnDeleted.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnDeleted.Location = new System.Drawing.Point(330, 12);
             this.BtnDeleted.Name = "BtnDeleted";
             this.BtnDeleted.Size = new System.Drawing.Size(75, 38);

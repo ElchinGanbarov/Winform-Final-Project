@@ -39,6 +39,7 @@
             this.BtnDelete = new System.Windows.Forms.Button();
             this.SelectedLabel = new System.Windows.Forms.Label();
             this.SelectedName = new System.Windows.Forms.Label();
+            this.BtnGenre = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvAddBooks)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +55,7 @@
             this.Column5});
             this.DgvAddBooks.Location = new System.Drawing.Point(12, 67);
             this.DgvAddBooks.Name = "DgvAddBooks";
-            this.DgvAddBooks.Size = new System.Drawing.Size(580, 170);
+            this.DgvAddBooks.Size = new System.Drawing.Size(675, 170);
             this.DgvAddBooks.TabIndex = 0;
             this.DgvAddBooks.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DataGridView1_RowHeaderMouseClick);
             // 
@@ -141,6 +142,17 @@
             this.SelectedName.Size = new System.Drawing.Size(0, 16);
             this.SelectedName.TabIndex = 5;
             // 
+            // BtnGenre
+            // 
+            this.BtnGenre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGenre.Location = new System.Drawing.Point(598, 37);
+            this.BtnGenre.Name = "BtnGenre";
+            this.BtnGenre.Size = new System.Drawing.Size(88, 27);
+            this.BtnGenre.TabIndex = 6;
+            this.BtnGenre.Text = "Janr elve et";
+            this.BtnGenre.UseVisualStyleBackColor = true;
+            this.BtnGenre.Click += new System.EventHandler(this.BtnGenre_Click);
+            // 
             // BookForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -148,6 +160,7 @@
             this.BackColor = System.Drawing.Color.MistyRose;
             this.BackgroundImage = global::Library_management.Properties.Resources.books1;
             this.ClientSize = new System.Drawing.Size(773, 334);
+            this.Controls.Add(this.BtnGenre);
             this.Controls.Add(this.SelectedName);
             this.Controls.Add(this.SelectedLabel);
             this.Controls.Add(this.BtnDelete);
@@ -177,5 +190,6 @@
         private System.Windows.Forms.Button BtnDelete;
         private System.Windows.Forms.Label SelectedLabel;
         private System.Windows.Forms.Label SelectedName;
+        private System.Windows.Forms.Button BtnGenre;
     }
 }

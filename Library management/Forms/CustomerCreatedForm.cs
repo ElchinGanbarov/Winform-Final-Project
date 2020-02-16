@@ -86,7 +86,7 @@ namespace Library_management.Forms
 
                 if (!TxtIdentify.Text.IsNumber() || TxtIdentify.Text.Length != 8 )
                 {
-                    MessageBox.Show("Kimlik nomresini duzgun qeyd edin !", "Xəbərdarlıq", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("En azi 8 eded olmalidir !", "Xəbərdarlıq", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
                 List<Customer> customers = _customerDal.GetAll();

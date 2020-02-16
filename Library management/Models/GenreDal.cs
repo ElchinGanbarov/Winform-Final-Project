@@ -19,7 +19,14 @@ namespace Library_management.Models
 
             }
         }
-
+        public void Create(Genre genre)
+        {
+            using (LibraryDbContext _context = new LibraryDbContext())
+            {
+                _context.Genres.Add(genre);
+                _context.SaveChanges();
+            }
+        }
         public List<Genre> GetGenreList()
         {
             using (LibraryDbContext _context=new LibraryDbContext())

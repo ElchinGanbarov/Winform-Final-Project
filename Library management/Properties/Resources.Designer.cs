@@ -123,6 +123,16 @@ namespace Library_management.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap manager {
+            get {
+                object obj = ResourceManager.GetObject("manager", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap png_customer_268x275_increase_customer_satisfaction_268 {
             get {
                 object obj = ResourceManager.GetObject("png-customer-268x275-increase-customer-satisfaction-268", resourceCulture);

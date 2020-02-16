@@ -55,7 +55,6 @@
             this.TxtEmail.ShortcutsEnabled = false;
             this.TxtEmail.Size = new System.Drawing.Size(151, 20);
             this.TxtEmail.TabIndex = 0;
-            this.TxtEmail.Text = "ilkin@gmail.com";
             // 
             // label2
             // 
@@ -74,7 +73,6 @@
             this.TxtPassword.Name = "TxtPassword";
             this.TxtPassword.Size = new System.Drawing.Size(151, 20);
             this.TxtPassword.TabIndex = 1;
-            this.TxtPassword.Text = "123456";
             this.TxtPassword.UseSystemPasswordChar = true;
             // 
             // button1

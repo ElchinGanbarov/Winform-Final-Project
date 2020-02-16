@@ -296,6 +296,7 @@
             // dtPckReturnTime
             // 
             this.dtPckReturnTime.Location = new System.Drawing.Point(686, 96);
+            this.dtPckReturnTime.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
             this.dtPckReturnTime.Name = "dtPckReturnTime";
             this.dtPckReturnTime.Size = new System.Drawing.Size(105, 20);
             this.dtPckReturnTime.TabIndex = 10;

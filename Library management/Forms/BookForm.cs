@@ -106,7 +106,12 @@ namespace Library_management.Forms
             BtnUpdate.Show();
             FillDataAdd();
         }
+        //Genre Added//
+        private void BtnGenre_Click(object sender, EventArgs e)
+        {
+            GenreForm genre = new GenreForm();
 
-
+            genre.ShowDialog();
+        }
     }
 }
