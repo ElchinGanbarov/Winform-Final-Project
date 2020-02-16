@@ -84,3 +84,4 @@ C:\Users\Admin\Desktop\Winform-Final-Project\Library management\bin\Debug\Closed
 C:\Users\Admin\Desktop\Winform-Final-Project\Library management\bin\Debug\ClosedXML.xml
 C:\Users\Admin\Desktop\Winform-Final-Project\Library management\bin\Debug\DocumentFormat.OpenXml.xml
 C:\Users\Admin\Desktop\Winform-Final-Project\Library management\bin\Debug\ExcelNumberFormat.xml
+C:\Users\Admin\Desktop\Winform-Final-Project\Library management\obj\Debug\Library_management.Migrations.userlevelupdate.resources

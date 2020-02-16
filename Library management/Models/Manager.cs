@@ -8,11 +8,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Library_management.Models
 {
-    public enum ManagerLevel
-    {
-        Admin,
-        Moderator
-    }
+  
     public class Manager
     {
         public int Id { get; set; }
@@ -35,6 +31,6 @@ namespace Library_management.Models
 
         [Column(TypeName ="bit")]
         public bool Status { get; set; }
-        public ManagerLevel Level { get; set; }
+        
     }
 }

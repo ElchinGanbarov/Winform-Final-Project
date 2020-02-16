@@ -218,6 +218,10 @@
     <Compile Include="Migrations\202002131145242_ordersdate.designer.cs">
       <DependentUpon>202002131145242_ordersdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002160049478_userlevelupdate.cs" />
+    <Compile Include="Migrations\202002160049478_userlevelupdate.designer.cs">
+      <DependentUpon>202002160049478_userlevelupdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\BookDal.cs" />
@@ -311,6 +315,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002131145242_ordersdate.resx">
       <DependentUpon>202002131145242_ordersdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002160049478_userlevelupdate.resx">
+      <DependentUpon>202002160049478_userlevelupdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

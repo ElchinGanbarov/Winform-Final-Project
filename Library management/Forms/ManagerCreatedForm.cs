@@ -108,7 +108,6 @@ namespace Library_management.Forms
                     Email = TxtEmail.Text,
                     Password = Crypto.HashPassword(TxtPassword.Text),
                     Phone = TxtPhone.Text,
-                    Level = ManagerLevel.Moderator,
                     Status = true
                 };
                 _managerDal.Create(manager);

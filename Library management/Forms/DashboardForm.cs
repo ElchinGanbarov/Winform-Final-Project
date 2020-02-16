@@ -34,15 +34,10 @@ namespace Library_management.Forms
         //Managers Form Open//
         private void BtnManagers_Click(object sender, EventArgs e)
         {
-            if (manager.Level == ManagerLevel.Admin)
-            {
+           
                 ManagerForm managerForm = new ManagerForm();
                 managerForm.ShowDialog();
-            }
-            else
-            {
-                MessageBox.Show("Sadece Admin daxil ola biler!");
-            }       
+                 
         }
 
         //Customers Form Open//
