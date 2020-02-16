@@ -87,7 +87,7 @@ namespace Library_management.Forms
                 LblSelectedName.Show();
                 BtnDelete.Show();
                 BtnUpdate.Show();
-                LblSelectedName.Text = _manager.Name;
+                LblSelectedName.Text = _manager.Name+" "+_manager.Surname;
             }
             catch { }
         }
