@@ -241,8 +241,15 @@ namespace Library_management.Forms
         private void BtnShowBasket_Click(object sender, EventArgs e)
         {
             ShowTheBasketForm showTheBasket = new ShowTheBasketForm(id);
+            showTheBasket.Events += ShowTheBasket_Events;
             showTheBasket.ShowDialog();
         }
+
+        private void ShowTheBasket_Events(object sender, EventArgs e)
+        {
+            FillListBookData();
+        }
+
         //BookReturnForm wiev//
         private void BtnReturnOrderNav_Click(object sender, EventArgs e)
         {

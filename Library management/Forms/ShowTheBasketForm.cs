@@ -16,10 +16,15 @@ namespace Library_management.Forms
         private OrderDal _orderDal;
         private int _id;
         private Orders orders;
+        private BookDal _bookDal;
+        private Book _book;
+        public event EventHandler Events;
+        
         public ShowTheBasketForm(int id)
         {
             _id = id;
             _orderDal = new OrderDal();
+            _bookDal = new BookDal();
             InitializeComponent();
         }
         //Order Delete//
@@ -51,6 +56,11 @@ namespace Library_management.Forms
         //DgwShowBasketOrder_CellClick Choose Order//
         private void DgwShowBasketOrder_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            int id=(int)dgwShowBasketOrder.Rows[e.RowIndex].Cells[0].Value;
+             orders = _orderDal.GetById(id);
+            _book = _bookDal.GetById(orders.BookId);
+            
+           
             try
             {
                 btnDeleteFromBasketShow.Enabled = true;
@@ -64,11 +74,35 @@ namespace Library_management.Forms
         //Choose Order Update BookCount//
         private void BtnUpdateShowBasketForm_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(dgwShowBasketOrder.CurrentRow.Cells[0].Value);
-            orders = _orderDal.GetById(id);
-            orders.BookCount = Convert.ToInt32(textBox1.Text);
-            _orderDal.Update(orders);
-            LoadAllDataForTheBasket();
+            int diff = Convert.ToInt32(textBox1.Text) - Convert.ToInt32(orders.BookCount);
+            MessageBox.Show(diff.ToString());
+
+            if (_book.Count>= diff)
+            {
+                int id = Convert.ToInt32(dgwShowBasketOrder.CurrentRow.Cells[0].Value);
+                orders = _orderDal.GetById(id);
+                orders.BookCount = Convert.ToInt32(textBox1.Text);
+                _orderDal.Update(orders);
+                LoadAllDataForTheBasket();
+                 _book.Count -= diff;
+                _bookDal.Update(_book);
+                Events?.Invoke(_book, new EventArgs());
+            }else if (diff < 0)
+            {
+                int b = Convert.ToInt32(orders.BookCount) - Convert.ToInt32(textBox1.Text);
+                int id = Convert.ToInt32(dgwShowBasketOrder.CurrentRow.Cells[0].Value);
+                orders = _orderDal.GetById(id);
+                orders.BookCount -=b;
+                _orderDal.Update(orders);
+                LoadAllDataForTheBasket();
+                _book.Count -= diff;
+                _bookDal.Update(_book);
+                Events?.Invoke(_book, new EventArgs());
+            }
+            else
+            {
+                MessageBox.Show("Kitabxanada bu sayda kitab yoxdur");
+            }
         }
     }
 }
