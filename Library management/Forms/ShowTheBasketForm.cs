@@ -75,7 +75,6 @@ namespace Library_management.Forms
         private void BtnUpdateShowBasketForm_Click(object sender, EventArgs e)
         {
             int diff = Convert.ToInt32(textBox1.Text) - Convert.ToInt32(orders.BookCount);
-            MessageBox.Show(diff.ToString());
 
             if (_book.Count>= diff)
             {
