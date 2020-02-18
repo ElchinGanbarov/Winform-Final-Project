@@ -207,9 +207,17 @@ namespace Library_management.Forms
             }
             catch (Exception)
             {
-                tbxBookPriceOrderTime.Text = dgwBookSearchForOrder.CurrentRow.Cells[2].Value.ToString();
-                tbxBookCount.Text = "";
-                wantedCountOfBook = 1;
+                try
+                {
+                    tbxBookPriceOrderTime.Text = dgwBookSearchForOrder.CurrentRow.Cells[2].Value.ToString();
+                    tbxBookCount.Text = "";
+                    wantedCountOfBook = 1;
+                }
+                catch
+                {
+
+                }
+                
             }
         }
      
@@ -217,7 +225,12 @@ namespace Library_management.Forms
         private void DtPckReturnTime_ValueChanged(object sender, EventArgs e)
         {
             tbxBookCount.Text = "";
-            tbxBookPriceOrderTime.Text = dgwBookSearchForOrder.CurrentRow.Cells[2].Value.ToString();
+            try
+            {
+                tbxBookPriceOrderTime.Text = dgwBookSearchForOrder.CurrentRow.Cells[2].Value.ToString();
+
+            }
+            catch { }
             DateTime now = DateTime.Now.Date;
             choosenDate = dtPckReturnTime.Value.Date;
             TimeSpan betweenDays = choosenDate - now;

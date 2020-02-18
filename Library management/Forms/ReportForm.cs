@@ -18,6 +18,7 @@ namespace Library_management.Forms
         private OrderDal _orderDal;
         private List<Orders> orders;
         private  decimal a;
+        private string path;
         public ReportForm()
         {
             _orderDal = new OrderDal();
@@ -44,6 +45,7 @@ namespace Library_management.Forms
             }
             LblReturnCount.Text = a.ToString();
             BtnExcelExport.Show();
+            BtnLocation.Show();
 
         }
 
@@ -70,13 +72,14 @@ namespace Library_management.Forms
 
                         }
                     }
-                    workbook.SaveAs(@"C:\Users\Admin\Desktop\Excel.xlsx");
+                    workbook.SaveAs(path);
                     MessageBox.Show("Cedvel Excele Export edildi");
                 }
             }
             catch
             {
                 MessageBox.Show("Zehmet olmasa fayili baglayin");
+                MessageBox.Show("@"+path);
             }
         }
         //End Time DatePicker Value Change//
@@ -88,6 +91,15 @@ namespace Library_management.Forms
         private void DgvStartTime_ValueChanged(object sender, EventArgs e)
         {
             a = 0;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+            {
+                path = folderBrowserDialog1.SelectedPath.ToString()+ @"\Excel.xlsx";
+            }
+            BtnExcelExport.Enabled = true;
         }
     }
 }

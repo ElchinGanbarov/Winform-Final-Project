@@ -45,6 +45,8 @@
             this.BtnExcelExport = new System.Windows.Forms.Button();
             this.LblCount = new System.Windows.Forms.Label();
             this.LblReturnCount = new System.Windows.Forms.Label();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.BtnLocation = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgwReportOrder)).BeginInit();
             this.SuspendLayout();
             // 
@@ -158,8 +160,9 @@
             // 
             // BtnExcelExport
             // 
+            this.BtnExcelExport.Enabled = false;
             this.BtnExcelExport.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnExcelExport.Location = new System.Drawing.Point(154, 67);
+            this.BtnExcelExport.Location = new System.Drawing.Point(275, 67);
             this.BtnExcelExport.Name = "BtnExcelExport";
             this.BtnExcelExport.Size = new System.Drawing.Size(92, 43);
             this.BtnExcelExport.TabIndex = 7;
@@ -187,12 +190,25 @@
             this.LblReturnCount.Size = new System.Drawing.Size(0, 16);
             this.LblReturnCount.TabIndex = 9;
             // 
+            // BtnLocation
+            // 
+            this.BtnLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLocation.Location = new System.Drawing.Point(146, 67);
+            this.BtnLocation.Name = "BtnLocation";
+            this.BtnLocation.Size = new System.Drawing.Size(113, 43);
+            this.BtnLocation.TabIndex = 10;
+            this.BtnLocation.Text = "Export Edilecek Yer";
+            this.BtnLocation.UseVisualStyleBackColor = true;
+            this.BtnLocation.Visible = false;
+            this.BtnLocation.Click += new System.EventHandler(this.button2_Click);
+            // 
             // ReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Library_management.Properties.Resources.report;
             this.ClientSize = new System.Drawing.Size(1147, 438);
+            this.Controls.Add(this.BtnLocation);
             this.Controls.Add(this.LblReturnCount);
             this.Controls.Add(this.LblCount);
             this.Controls.Add(this.BtnExcelExport);
@@ -230,5 +246,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.Label LblCount;
         private System.Windows.Forms.Label LblReturnCount;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.Button BtnLocation;
     }
 }

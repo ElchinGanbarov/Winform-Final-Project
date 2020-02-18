@@ -86,3 +86,59 @@ C:\Users\Admin\Desktop\Winform-Final-Project\Library management\bin\Debug\Docume
 C:\Users\Admin\Desktop\Winform-Final-Project\Library management\bin\Debug\ExcelNumberFormat.xml
 C:\Users\Admin\Desktop\Winform-Final-Project\Library management\obj\Debug\Library_management.Migrations.userlevelupdate.resources
 C:\Users\Admin\Desktop\Winform-Final-Project\Library management\obj\Debug\Library_management.Forms.GenreForm.resources
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\bin\Debug\Library management.exe.config
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\bin\Debug\Library management.exe
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\bin\Debug\Library management.pdb
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\bin\Debug\ClosedXML.dll
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\bin\Debug\CryptoHelper.dll
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\bin\Debug\EntityFramework.dll
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\bin\Debug\ExcelNumberFormat.dll
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\bin\Debug\FastMember.dll
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\bin\Debug\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\bin\Debug\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\bin\Debug\System.IO.Packaging.dll
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\bin\Debug\ClosedXML.pdb
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\bin\Debug\ClosedXML.xml
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\bin\Debug\CryptoHelper.xml
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\bin\Debug\EntityFramework.xml
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\bin\Debug\ExcelNumberFormat.xml
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\bin\Debug\Microsoft.AspNetCore.Cryptography.Internal.xml
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\bin\Debug\Microsoft.AspNetCore.Cryptography.KeyDerivation.xml
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\obj\Debug\Library Management.csprojAssemblyReference.cache
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\obj\Debug\Library_management.Forms.BookCreatForm.resources
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\obj\Debug\Library_management.Forms.BookForm.resources
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\obj\Debug\Library_management.Forms.BookReturnForm.resources
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\obj\Debug\Library_management.Forms.BookReturnsShowForm.resources
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\obj\Debug\Library_management.Forms.CustomerCreatedForm.resources
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\obj\Debug\Library_management.Forms.CustomerForm.resources
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\obj\Debug\Library_management.Forms.DashboardForm.resources
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\obj\Debug\Library_management.Forms.GenreForm.resources
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\obj\Debug\Library_management.Forms.LoginForm.resources
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\obj\Debug\Library_management.Forms.ManagerCreatedForm.resources
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\obj\Debug\Library_management.Forms.ManagerForm.resources
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\obj\Debug\Library_management.Forms.OrdersForm.resources
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\obj\Debug\Library_management.Forms.ReportForm.resources
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\obj\Debug\Library_management.Forms.ShowTheBasketForm.resources
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\obj\Debug\Library_management.Migrations.BooksAndCustomersAndGenresAndManagersAndOrdersAndOrderBooks.resources
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\obj\Debug\Library_management.Migrations.CustomerAndManagerUpdate.resources
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\obj\Debug\Library_management.Migrations.ManagerStatusAdd.resources
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\obj\Debug\Library_management.Migrations.OrdersColumnDateChange.resources
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\obj\Debug\Library_management.Migrations.OrdersBookAdd.resources
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\obj\Debug\Library_management.Migrations.OrdersbookName.resources
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\obj\Debug\Library_management.Migrations.orderscustomersmnagers.resources
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\obj\Debug\Library_management.Migrations.ordercolumtype.resources
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\obj\Debug\Library_management.Migrations.orderscolumntype.resources
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\obj\Debug\Library_management.Migrations.orders.resources
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\obj\Debug\Library_management.Migrations.status.resources
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\obj\Debug\Library_management.Migrations.orderbookdelete.resources
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\obj\Debug\Library_management.Migrations.ordersdate.resources
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\obj\Debug\Library_management.Migrations.userlevelupdate.resources
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\obj\Debug\Library_management.Properties.Resources.resources
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\obj\Debug\Library Management.csproj.GenerateResource.cache
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\obj\Debug\Library Management.csproj.CopyComplete
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\obj\Debug\Library management.exe
+C:\Users\Developer\Desktop\Elcin\Winform-Final-Project\Library management\obj\Debug\Library management.pdb
